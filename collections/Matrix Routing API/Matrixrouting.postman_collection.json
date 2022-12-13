@@ -1,0 +1,190 @@
+{
+	"info": {
+		"name": "PTV Developer Matrix Routing API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Calculate a matrix",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"origins\": [{\r\n        \"latitude\": 49.013301829,\r\n        \"longitude\": 8.4277897486\r\n    },{\r\n        \"latitude\": 48.889125,\r\n        \"longitude\": 2.249453\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{hostname}}/{{apiprefix_matrix}}/matrices?results=DISTANCES,TRAVEL_TIMES",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"{{apiprefix_matrix}}",
+						"matrices"
+					],
+					"query": [
+						{
+							"key": "results",
+							"value": "DISTANCES,TRAVEL_TIMES"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Start a matrix calculation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.collectionVariables.set(\"MatrixId\", pm.response.json().id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"origins\": [{\r\n        \"latitude\": 49.013301829,\r\n        \"longitude\": 8.4277897486\r\n    },{\r\n        \"latitude\": 48.889125,\r\n        \"longitude\": 2.249453\r\n    }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{hostname}}/{{apiprefix_matrix}}/matrices/async?results=DISTANCES,TRAVEL_TIMES",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"{{apiprefix_matrix}}",
+						"matrices",
+						"async"
+					],
+					"query": [
+						{
+							"key": "results",
+							"value": "DISTANCES,TRAVEL_TIMES"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{hostname}}/{{apiprefix_matrix}}/matrices/status/{{MatrixId}}",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"{{apiprefix_matrix}}",
+						"matrices",
+						"status",
+						"{{MatrixId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cancel matrix calculation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{hostname}}/{{apiprefix_matrix}}/matrices/{{MatrixId}}",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"{{apiprefix_matrix}}",
+						"matrices",
+						"{{MatrixId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get matrix",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://{{hostname}}/{{apiprefix_matrix}}/matrices/{{MatrixId}}",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"{{apiprefix_matrix}}",
+						"matrices",
+						"{{MatrixId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{ApiKey}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "ApiKey",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "MatrixId",
+			"value": ""
+		}
+	]
+}

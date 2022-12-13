@@ -1,0 +1,2695 @@
+{
+	"info": {
+		"name": "PTV Developer Routing Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Routing",
+			"item": [
+				{
+					"name": "A-B Routing",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "PTV-Internal-Return-Xserver-Request",
+								"value": "True",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_routing}}/routes?waypoints=49.0133262,8.4281659&waypoints=53.5567986,10.0306892&results=POLYLINE&options[trafficMode]=REALISTIC",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_routing}}",
+								"routes"
+							],
+							"query": [
+								{
+									"key": "waypoints",
+									"value": "49.0133262,8.4281659"
+								},
+								{
+									"key": "waypoints",
+									"value": "53.5567986,10.0306892"
+								},
+								{
+									"key": "results",
+									"value": "POLYLINE",
+									"description": "POLYLINE"
+								},
+								{
+									"key": "options[trafficMode]",
+									"value": "REALISTIC",
+									"description": "AVERAGE,REALISTIC"
+								},
+								{
+									"key": "profile",
+									"value": "EUR_TRAILER_TRUCK",
+									"description": "EUR_TRAILER_TRUCK,EUR_TRUCK_40T,EUR_TRUCK_11_99_T,EUR_TRUCK_7_49T,EUR_VAN,EUR_CAR,USA_1_PICKUP,USA_5_DELIVERY,USA_8_SEMITRAILER_5AXLE,AUS_LCV_LIGHT_COMMERCIAL,AUS_MR_MEDIUM_RIGID,AUS_HR_HEAVY_RIGID,IMEA_TRUCK_40T,IMEA_TRUCK_7_49T,IMEA_VAN,IMEA_CAR",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Waypoints",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "PTV-Internal-Return-Xserver-Request",
+								"value": "True",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_routing}}/routes?waypoints=52.5168476,13.4033203;includeLastMeters&waypoints=55.6526065,12.4823570;radius=100&waypoints=49.06560,8.47087;matchSideOfStreet;roadAccess=49.06568,8.47184&options[trafficMode]=REALISTIC&results=POLYLINE&profile=EUR_TRAILER_TRUCK",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_routing}}",
+								"routes"
+							],
+							"query": [
+								{
+									"key": "waypoints",
+									"value": "52.5168476,13.4033203;includeLastMeters",
+									"description": "OFF-Road"
+								},
+								{
+									"key": "waypoints",
+									"value": "52.5168476,13.4033203",
+									"description": "On-Road",
+									"disabled": true
+								},
+								{
+									"key": "waypoints",
+									"value": "55.6526065,12.4823570;includeLastMeters",
+									"description": "OFF-Road",
+									"disabled": true
+								},
+								{
+									"key": "waypoints",
+									"value": "55.6526065,12.4823570;radius=100",
+									"description": "On-Road,radius"
+								},
+								{
+									"key": "waypoints",
+									"value": "48.76638,9.17152",
+									"description": "On-Road",
+									"disabled": true
+								},
+								{
+									"key": "waypoints",
+									"value": "49.06560,8.47087;matchSideOfStreet;roadAccess=49.06568,8.47184",
+									"description": "On-Road,roadAccess,matchSideOfStreet"
+								},
+								{
+									"key": "waypoints",
+									"value": "49.06560,8.47087;roadAccess=49.06568,8.47184",
+									"description": "roadAccess",
+									"disabled": true
+								},
+								{
+									"key": "options[trafficMode]",
+									"value": "REALISTIC",
+									"description": "AVERAGE,REALISTIC"
+								},
+								{
+									"key": "results",
+									"value": "POLYLINE",
+									"description": "POLYLINE"
+								},
+								{
+									"key": "profile",
+									"value": "EUR_TRAILER_TRUCK",
+									"description": "EUR_TRAILER_TRUCK,EUR_TRUCK_40T,EUR_TRUCK_11_99_T,EUR_TRUCK_7_49T,EUR_VAN,EUR_CAR,USA_1_PICKUP,USA_5_DELIVERY,USA_8_SEMITRAILER_5AXLE,AUS_LCV_LIGHT_COMMERCIAL,AUS_MR_MEDIUM_RIGID,AUS_HR_HEAVY_RIGID,IMEA_TRUCK_40T,IMEA_TRUCK_7_49T,IMEA_VAN,IMEA_CAR"
+								},
+								{
+									"key": "options[startTime]",
+									"value": "NOW",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Geographic Restrictions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "PTV-Internal-Return-Xserver-Request",
+								"value": "True",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_routing}}/routes?waypoints=48.76638,9.17152&waypoints=44.79455,10.33058&options[prohibitedCountries]=CH&options[allowedCountries]=&options[trafficMode]=AVERAGE&results=POLYLINE,BORDER_EVENTS,MANEUVER_EVENTS&profile=EUR_TRAILER_TRUCK",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_routing}}",
+								"routes"
+							],
+							"query": [
+								{
+									"key": "waypoints",
+									"value": "48.76638,9.17152"
+								},
+								{
+									"key": "waypoints",
+									"value": "44.79455,10.33058"
+								},
+								{
+									"key": "options[prohibitedCountries]",
+									"value": "CH",
+									"description": "Country Codes https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"
+								},
+								{
+									"key": "options[allowedCountries]",
+									"value": "",
+									"description": "Country Codes https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"
+								},
+								{
+									"key": "options[trafficMode]",
+									"value": "AVERAGE",
+									"description": "AVERAGE,REALISTIC"
+								},
+								{
+									"key": "results",
+									"value": "POLYLINE,BORDER_EVENTS,MANEUVER_EVENTS",
+									"description": "POLYLINE,BORDER_EVENTS"
+								},
+								{
+									"key": "profile",
+									"value": "EUR_TRAILER_TRUCK",
+									"description": "EUR_TRAILER_TRUCK,EUR_TRUCK_40T,EUR_TRUCK_11_99_T,EUR_TRUCK_7_49T,EUR_VAN,EUR_CAR,USA_1_PICKUP,USA_5_DELIVERY,USA_8_SEMITRAILER_5AXLE,AUS_LCV_LIGHT_COMMERCIAL,AUS_MR_MEDIUM_RIGID,AUS_HR_HEAVY_RIGID,IMEA_TRUCK_40T,IMEA_TRUCK_7_49T,IMEA_VAN,IMEA_CAR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Avoid",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "PTV-Internal-Return-Xserver-Request",
+								"value": "True",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_routing}}/routes?waypoints=48.998014,8.367462&waypoints=49.024474,8.396472&options[trafficMode]=AVERAGE&results=POLYLINE,TOLL_COSTS,COMBINED_TRANSPORT_EVENTS",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_routing}}",
+								"routes"
+							],
+							"query": [
+								{
+									"key": "waypoints",
+									"value": "48.998014,8.367462"
+								},
+								{
+									"key": "waypoints",
+									"value": "49.024474,8.396472"
+								},
+								{
+									"key": "options[trafficMode]",
+									"value": "AVERAGE",
+									"description": "AVERAGE,REALISTIC"
+								},
+								{
+									"key": "options[avoid]",
+									"value": "TOLL",
+									"disabled": true
+								},
+								{
+									"key": "options[avoid]",
+									"value": "FERRIES",
+									"disabled": true
+								},
+								{
+									"key": "options[avoid]",
+									"value": "RAIL_SHUTTLES",
+									"disabled": true
+								},
+								{
+									"key": "results",
+									"value": "POLYLINE,TOLL_COSTS,COMBINED_TRANSPORT_EVENTS",
+									"description": "POLYLINE,TOLL_COSTS,COMBINED_TRANSPORT_EVENTS"
+								},
+								{
+									"key": "profile",
+									"value": "EUR_TRAILER_TRUCK",
+									"description": "EUR_TRAILER_TRUCK,EUR_TRUCK_40T,EUR_TRUCK_11_99_T,EUR_TRUCK_7_49T,EUR_VAN,EUR_CAR,USA_1_PICKUP,USA_5_DELIVERY,USA_8_SEMITRAILER_5AXLE,AUS_LCV_LIGHT_COMMERCIAL,AUS_MR_MEDIUM_RIGID,AUS_HR_HEAVY_RIGID,IMEA_TRUCK_40T,IMEA_TRUCK_7_49T,IMEA_VAN,IMEA_CAR",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Turn Restrictions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "PTV-Internal-Return-Xserver-Request",
+								"value": "True",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_routing}}/routes?waypoints=49.0007776,8.3934885&waypoints=48.995642,8.389391&options[preferTurnsOnPassengerSide]=true&options[trafficMode]=AVERAGE&results=POLYLINE",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_routing}}",
+								"routes"
+							],
+							"query": [
+								{
+									"key": "waypoints",
+									"value": "49.0007776,8.3934885"
+								},
+								{
+									"key": "waypoints",
+									"value": "48.995642,8.389391"
+								},
+								{
+									"key": "options[preferTurnsOnPassengerSide]",
+									"value": "true"
+								},
+								{
+									"key": "options[trafficMode]",
+									"value": "AVERAGE",
+									"description": "AVERAGE,REALISTIC"
+								},
+								{
+									"key": "results",
+									"value": "POLYLINE"
+								},
+								{
+									"key": "profile",
+									"value": "EUR_TRAILER_TRUCK",
+									"description": "EUR_TRAILER_TRUCK,EUR_TRUCK_40T,EUR_TRUCK_11_99_T,EUR_TRUCK_7_49T,EUR_VAN,EUR_CAR,USA_1_PICKUP,USA_5_DELIVERY,USA_8_SEMITRAILER_5AXLE,AUS_LCV_LIGHT_COMMERCIAL,AUS_MR_MEDIUM_RIGID,AUS_HR_HEAVY_RIGID,IMEA_TRUCK_40T,IMEA_TRUCK_7_49T,IMEA_VAN,IMEA_CAR",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Toll",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "PTV-Internal-Return-Xserver-Request",
+								"value": "True",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_routing}}/routes?waypoints=49.0133618,8.4277972&waypoints=48.8950289,8.6715602&options[trafficMode]=AVERAGE&options[currency]=USD&profile=EUR_TRAILER_TRUCK&results=POLYLINE,TOLL_COSTS,TOLL_SYSTEMS,TOLL_SECTIONS,TOLL_EVENTS",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_routing}}",
+								"routes"
+							],
+							"query": [
+								{
+									"key": "waypoints",
+									"value": "49.0133618,8.4277972"
+								},
+								{
+									"key": "waypoints",
+									"value": "48.8950289,8.6715602"
+								},
+								{
+									"key": "options[trafficMode]",
+									"value": "AVERAGE",
+									"description": "AVERAGE,REALISTIC"
+								},
+								{
+									"key": "options[currency]",
+									"value": "USD",
+									"description": "USD,EUR,CHF,PLN,GBP,AED"
+								},
+								{
+									"key": "profile",
+									"value": "EUR_TRAILER_TRUCK",
+									"description": "EUR_TRAILER_TRUCK,EUR_TRUCK_40T,EUR_TRUCK_11_99_T,EUR_TRUCK_7_49T,EUR_VAN,EUR_CAR,USA_1_PICKUP,USA_5_DELIVERY,USA_8_SEMITRAILER_5AXLE,AUS_LCV_LIGHT_COMMERCIAL,AUS_MR_MEDIUM_RIGID,AUS_HR_HEAVY_RIGID,IMEA_TRUCK_40T,IMEA_TRUCK_7_49T,IMEA_VAN,IMEA_CAR"
+								},
+								{
+									"key": "results",
+									"value": "POLYLINE,TOLL_COSTS,TOLL_SYSTEMS,TOLL_SECTIONS,TOLL_EVENTS",
+									"description": "TOLL_COSTS,TOLL_SYSTEMS,TOLL_SECTIONS,TOLL_EVENTS,POLYLINE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Emissions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "PTV-Internal-Return-Xserver-Request",
+								"value": "True",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_routing}}/routes?waypoints=49.0133618,8.4277972&waypoints=48.8950289,8.6715602&vehicle[emissionStandard]=EURO_0&vehicle[averageFuelConsumption]=4&vehicle[fuelType]=GASOLINE&options[trafficMode]=AVERAGE&profile=EUR_TRAILER_TRUCK&results=POLYLINE,EMISSIONS_EN16258_2012",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_routing}}",
+								"routes"
+							],
+							"query": [
+								{
+									"key": "waypoints",
+									"value": "49.0133618,8.4277972"
+								},
+								{
+									"key": "waypoints",
+									"value": "48.8950289,8.6715602"
+								},
+								{
+									"key": "vehicle[emissionStandard]",
+									"value": "EURO_0",
+									"description": "EURO_0,EURO_1,EURO_2,EURO_3,EURO_4,EURO_5,EURO_EEV,EURO_6,EURO_6C,EURO"
+								},
+								{
+									"key": "vehicle[averageFuelConsumption]",
+									"value": "4"
+								},
+								{
+									"key": "vehicle[fuelType]",
+									"value": "GASOLINE",
+									"description": "GASOLINE,DIESEL,COMPRESED_NATURAL_GAS,LIQUEFIED_PETROLEUM_GAS"
+								},
+								{
+									"key": "options[trafficMode]",
+									"value": "AVERAGE",
+									"description": "AVERAGE,REALISTIC"
+								},
+								{
+									"key": "profile",
+									"value": "EUR_TRAILER_TRUCK",
+									"description": "EUR_TRAILER_TRUCK,EUR_TRUCK_40T,EUR_TRUCK_11_99_T,EUR_TRUCK_7_49T,EUR_VAN,EUR_CAR,USA_1_PICKUP,USA_5_DELIVERY,USA_8_SEMITRAILER_5AXLE,AUS_LCV_LIGHT_COMMERCIAL,AUS_MR_MEDIUM_RIGID,AUS_HR_HEAVY_RIGID,IMEA_TRUCK_40T,IMEA_TRUCK_7_49T,IMEA_VAN,IMEA_CAR"
+								},
+								{
+									"key": "results",
+									"value": "POLYLINE,EMISSIONS_EN16258_2012",
+									"description": "EMISSIONS_EN16258_2012,EMISSIONS_EN16258_2012_HBEFA,EMISSIONS_FRENCH_CO2E_DECREE_2017_639"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Route IDs",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "PTV-Internal-Return-Xserver-Request",
+								"value": "True",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_routing}}/routes?waypoints=49.0133618,8.4277972&waypoints=48.8950289,8.6715602&options[trafficMode]=AVERAGE&results=ROUTE_ID&profile=EUR_TRAILER_TRUCK",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_routing}}",
+								"routes"
+							],
+							"query": [
+								{
+									"key": "waypoints",
+									"value": "49.0133618,8.4277972"
+								},
+								{
+									"key": "waypoints",
+									"value": "48.8950289,8.6715602"
+								},
+								{
+									"key": "options[trafficMode]",
+									"value": "AVERAGE",
+									"description": "AVERAGE,REALISTIC"
+								},
+								{
+									"key": "results",
+									"value": "ROUTE_ID"
+								},
+								{
+									"key": "profile",
+									"value": "EUR_TRAILER_TRUCK",
+									"description": "EUR_TRAILER_TRUCK,EUR_TRUCK_40T,EUR_TRUCK_11_99_T,EUR_TRUCK_7_49T,EUR_VAN,EUR_CAR,USA_1_PICKUP,USA_5_DELIVERY,USA_8_SEMITRAILER_5AXLE,AUS_LCV_LIGHT_COMMERCIAL,AUS_MR_MEDIUM_RIGID,AUS_HR_HEAVY_RIGID,IMEA_TRUCK_40T,IMEA_TRUCK_7_49T,IMEA_VAN,IMEA_CAR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recalculate with Events",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "PTV-Internal-Return-Xserver-Request",
+								"value": "True",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_routing}}/routes?routeId=44fc058c-55b9-41ad-81f1-a8ea4f0179a2&results=MANEUVER_EVENTS,WAYPOINT_EVENTS,TOLL_EVENTS,BORDER_EVENTS,VIOLATION_EVENTS,COMBINED_TRANSPORT_EVENTS,TRAFFIC_EVENTS,UTC_OFFSET_CHANGE_EVENTS,POLYLINE",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_routing}}",
+								"routes"
+							],
+							"query": [
+								{
+									"key": "routeId",
+									"value": "44fc058c-55b9-41ad-81f1-a8ea4f0179a2",
+									"description": "Insert your routeId"
+								},
+								{
+									"key": "results",
+									"value": "MANEUVER_EVENTS,WAYPOINT_EVENTS,TOLL_EVENTS,BORDER_EVENTS,VIOLATION_EVENTS_POLYLINE,COMBINED_TRANSPORT_EVENTS,TRAFFIC_EVENTS,UTC_OFFSET_CHANGE_EVENTS,POLYLINE",
+									"description": "MANEUVER_EVENTS,WAYPOINT_EVENTS,TOLL_EVENTS,BORDER_EVENTS,VIOLATION_EVENTS,COMBINED_TRANSPORT_EVENTS,TRAFFIC_EVENTS,UTC_OFFSET_CHANGE_EVENTS"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Short or Fast Routes",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "PTV-Internal-Return-Xserver-Request",
+								"value": "True",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_routing}}/routes?waypoints=48.861638,8.23986411&waypoints=48.167865,8.589677&options[trafficMode]=AVERAGE&options[routingMode]=SHORT&results=POLYLINE",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_routing}}",
+								"routes"
+							],
+							"query": [
+								{
+									"key": "waypoints",
+									"value": "48.861638,8.23986411"
+								},
+								{
+									"key": "waypoints",
+									"value": "48.167865,8.589677"
+								},
+								{
+									"key": "options[trafficMode]",
+									"value": "AVERAGE",
+									"description": "AVERAGE,REALISTIC"
+								},
+								{
+									"key": "options[routingMode]",
+									"value": "SHORT",
+									"description": "SHORT,FAST"
+								},
+								{
+									"key": "results",
+									"value": "POLYLINE"
+								},
+								{
+									"key": "profile",
+									"value": "",
+									"description": "EUR_TRAILER_TRUCK,EUR_TRUCK_40T,EUR_TRUCK_11_99_T,EUR_TRUCK_7_49T,EUR_VAN,EUR_CAR,USA_1_PICKUP,USA_5_DELIVERY,USA_8_SEMITRAILER_5AXLE,AUS_LCV_LIGHT_COMMERCIAL,AUS_MR_MEDIUM_RIGID,AUS_HR_HEAVY_RIGID,IMEA_TRUCK_40T,IMEA_TRUCK_7_49T,IMEA_VAN,IMEA_CAR",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Monetary Costs",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "PTV-Internal-Return-Xserver-Request",
+								"value": "True",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_routing}}/routes?waypoints=49.0133618,8.4277972&waypoints=48.9514510,8.5734558&options[currency]=EUR&monetaryCostOptions[costPerKilometer]=1.2&monetaryCostOptions[workingCostPerHour]=20.5&monetaryCostOptions[costPerFuelUnit]=1&options[routingMode]=MONETARY&options[trafficMode]=AVERAGE&results=POLYLINE,MONETARY_COSTS&profile=EUR_TRAILER_TRUCK",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_routing}}",
+								"routes"
+							],
+							"query": [
+								{
+									"key": "waypoints",
+									"value": "49.0133618,8.4277972"
+								},
+								{
+									"key": "waypoints",
+									"value": "48.9514510,8.5734558"
+								},
+								{
+									"key": "options[currency]",
+									"value": "EUR"
+								},
+								{
+									"key": "monetaryCostOptions[costPerKilometer]",
+									"value": "1.2"
+								},
+								{
+									"key": "monetaryCostOptions[workingCostPerHour]",
+									"value": "20.5"
+								},
+								{
+									"key": "monetaryCostOptions[costPerFuelUnit]",
+									"value": "1"
+								},
+								{
+									"key": "options[routingMode]",
+									"value": "MONETARY",
+									"description": "MONETARY,FAST"
+								},
+								{
+									"key": "options[trafficMode]",
+									"value": "AVERAGE",
+									"description": "AVERAGE,REALISTIC"
+								},
+								{
+									"key": "results",
+									"value": "POLYLINE,MONETARY_COSTS",
+									"description": "POLYLINE,MONETARY_COSTS"
+								},
+								{
+									"key": "profile",
+									"value": "EUR_TRAILER_TRUCK",
+									"description": "EUR_TRAILER_TRUCK,EUR_TRUCK_40T,EUR_TRUCK_11_99_T,EUR_TRUCK_7_49T,EUR_VAN,EUR_CAR,USA_1_PICKUP,USA_5_DELIVERY,USA_8_SEMITRAILER_5AXLE,AUS_LCV_LIGHT_COMMERCIAL,AUS_MR_MEDIUM_RIGID,AUS_HR_HEAVY_RIGID,IMEA_TRUCK_40T,IMEA_TRUCK_7_49T,IMEA_VAN,IMEA_CAR"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Block Intersecting Roads",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "PTV-Internal-Return-Xserver-Request",
+								"value": "True",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_routing}}/routes?waypoints=49.024474,8.396472&waypoints=48.998014,8.367462&options[blockIntersectingRoads]=49.011965,8.381384,49.004256,8.376232&options[trafficMode]=AVERAGE&results=POLYLINE",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_routing}}",
+								"routes"
+							],
+							"query": [
+								{
+									"key": "waypoints",
+									"value": "49.024474,8.396472"
+								},
+								{
+									"key": "waypoints",
+									"value": "48.998014,8.367462"
+								},
+								{
+									"key": "options[blockIntersectingRoads]",
+									"value": "49.011965,8.381384,49.004256,8.376232"
+								},
+								{
+									"key": "options[trafficMode]",
+									"value": "AVERAGE",
+									"description": "AVERAGE,REALISTIC"
+								},
+								{
+									"key": "results",
+									"value": "POLYLINE",
+									"description": "POLYLINE"
+								},
+								{
+									"key": "profile",
+									"value": "",
+									"description": "EUR_TRAILER_TRUCK,EUR_TRUCK_40T,EUR_TRUCK_11_99_T,EUR_TRUCK_7_49T,EUR_VAN,EUR_CAR,USA_1_PICKUP,USA_5_DELIVERY,USA_8_SEMITRAILER_5AXLE,AUS_LCV_LIGHT_COMMERCIAL,AUS_MR_MEDIUM_RIGID,AUS_HR_HEAVY_RIGID,IMEA_TRUCK_40T,IMEA_TRUCK_7_49T,IMEA_VAN,IMEA_CAR",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle parameters at waypoints",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "PTV-Internal-Return-Xserver-Request",
+								"value": "True",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"waypoints\": [\r\n        {\r\n            \"offRoad\": {\r\n                \"latitude\": 49.5759333,\r\n                \"longitude\": 5.9865461,\r\n                \"vehicleParameters\": {\r\n                    \"loadWeight\": 1000\r\n                }\r\n            }\r\n        },\r\n        {\r\n            \"offRoad\": {\r\n                \"latitude\": 49.5870110,\r\n                \"longitude\": 5.9846703,\r\n                \"vehicleParameters\": {\r\n                    \"loadWeight\": 1000\r\n                }\r\n            }\r\n        },\r\n        {\r\n            \"offRoad\": {\r\n                \"latitude\": 49.6159072,\r\n                \"longitude\": 5.9919114,\r\n                \"vehicleParameters\": {\r\n                    \"loadWeight\": 0\r\n                }\r\n            }\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_routing}}/routes?options[trafficMode]=REALISTIC&results=POLYLINE&vehicle[emptyWeight]=3000",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_routing}}",
+								"routes"
+							],
+							"query": [
+								{
+									"key": "options[trafficMode]",
+									"value": "REALISTIC",
+									"description": "AVERAGE,REALISTIC"
+								},
+								{
+									"key": "results",
+									"value": "POLYLINE",
+									"description": "POLYLINE"
+								},
+								{
+									"key": "profile",
+									"value": "",
+									"description": "EUR_TRAILER_TRUCK,EUR_TRUCK_40T,EUR_TRUCK_11_99_T,EUR_TRUCK_7_49T,EUR_VAN,EUR_CAR,USA_1_PICKUP,USA_5_DELIVERY,USA_8_SEMITRAILER_5AXLE,AUS_LCV_LIGHT_COMMERCIAL,AUS_MR_MEDIUM_RIGID,AUS_HR_HEAVY_RIGID,IMEA_TRUCK_40T,IMEA_TRUCK_7_49T,IMEA_VAN,IMEA_CAR",
+									"disabled": true
+								},
+								{
+									"key": "vehicle[emptyWeight]",
+									"value": "3000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Violation Events Polyline",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "PTV-Internal-Return-Xserver-Request",
+								"value": "True",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_routing}}/routes?waypoints=48.99497,8.37969&waypoints=48.98650,8.38243&options[trafficMode]=REALISTIC&options[polylineFormat]=GEO_JSON&results=POLYLINE,VIOLATION_EVENTS_POLYLINE&profile=EUR_TRAILER_TRUCK",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_routing}}",
+								"routes"
+							],
+							"query": [
+								{
+									"key": "waypoints",
+									"value": "48.99497,8.37969"
+								},
+								{
+									"key": "waypoints",
+									"value": "48.98650,8.38243"
+								},
+								{
+									"key": "options[trafficMode]",
+									"value": "REALISTIC",
+									"description": "AVERAGE,REALISTIC"
+								},
+								{
+									"key": "options[polylineFormat]",
+									"value": "GEO_JSON",
+									"description": "GEO_JSON,GOOGLE_ENCODED_POLYLINE"
+								},
+								{
+									"key": "results",
+									"value": "POLYLINE,VIOLATION_EVENTS_POLYLINE",
+									"description": "POLYLINE,VIOLATION_EVENTS_POLYLINE"
+								},
+								{
+									"key": "profile",
+									"value": "EUR_TRAILER_TRUCK",
+									"description": "EUR_TRAILER_TRUCK,EUR_TRUCK_40T,EUR_TRUCK_11_99_T,EUR_TRUCK_7_49T,EUR_VAN,EUR_CAR,USA_1_PICKUP,USA_5_DELIVERY,USA_8_SEMITRAILER_5AXLE,AUS_LCV_LIGHT_COMMERCIAL,AUS_MR_MEDIUM_RIGID,AUS_HR_HEAVY_RIGID,IMEA_TRUCK_40T"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "apikey",
+				"apikey": [
+					{
+						"key": "value",
+						"value": "{{ApiKey}}",
+						"type": "string"
+					},
+					{
+						"key": "key",
+						"value": "ApiKey",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var baseTemplate = `",
+							"<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.6.0/dist/leaflet.css\"",
+							"integrity=\"sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==\"crossorigin=\"\"/>",
+							"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js\" integrity=\"sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=\" crossorigin=\"anonymous\"></script>",
+							"<!-- Make sure you put this AFTER Leaflet's CSS -->",
+							"<script src=\"https://unpkg.com/leaflet@1.6.0/dist/leaflet.js\"integrity=\"sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==\"crossorigin=\"\"></script>",
+							"<div id=\"mapid\"></div>",
+							"<style>",
+							"#mapid { height: 100%; }",
+							"</style>`;",
+							"",
+							"function getWaypointList(waypoints, isPost)",
+							"{",
+							"    result=[]",
+							"    if (!isPost) {",
+							"        for (let i= 0; waypoints && i < waypoints.length; i++) { ",
+							"            result.add(waypoints[i].split(\";\")[0]);",
+							"        }",
+							"    } else {",
+							"        for (let i= 0; waypoints && i < waypoints.length; i++) { ",
+							"            if (waypoints[i].onRoad)",
+							"                result.add([waypoints[i].onRoad.latitude,waypoints[i].onRoad.longitude])",
+							"            else if (waypoints[i].offRoad)",
+							"                result.add([waypoints[i].offRoad.latitude,waypoints[i].offRoad.longitude])",
+							"            else if (waypoints[i].manipulate)",
+							"                result.add([waypoints[i].manipulate.latitude,waypoints[i].manipulate.longitude])",
+							"        }        ",
+							"    }",
+							"    return result;",
+							"}",
+							"",
+							"function getWpType(waypoints, isPost) {",
+							"    result=[]",
+							"    if (!isPost) {",
+							"        for (let i= 0; waypoints && i < waypoints.length; i++) { ",
+							"            var temp = waypoints[i].split(\";\")",
+							"            for (let j = 0; j < temp.length;++j) {",
+							"                temp[j] = temp[j].split(\"=\")[0];",
+							"            }",
+							"            if (temp.includes(\"includeLastMeters\") || temp.includes(\"roadAccess\"))",
+							"                result.add(\"'Offroad'\");",
+							"            else if (temp.includes(\"radius\"))",
+							"                result.add(\"'Manipulate'\")",
+							"            else if (temp.includes(\"combinedTransport\"))",
+							"                result.add(\"'CombinedTransport'\")",
+							"            else",
+							"                result.add(\"'Onroad'\");",
+							"        }",
+							"    } else {",
+							"        for (let i= 0; waypoints && i < waypoints.length; i++) { ",
+							"            if (waypoints[i].offRoad !== null)",
+							"                result.add(\"'Offroad'\");",
+							"            else if (waypoints[i].onRoad !== null)",
+							"                result.add(\"'Onroad'\");",
+							"            else if (waypoints[i].manipulate !== null)",
+							"                result.add(\"'Manipulate'\");",
+							"            else if (waypoints[i].combinedTransport !== null)",
+							"                result.add(\"'CombinedTransport'\");",
+							"        }",
+							"    }",
+							"    return result;",
+							"}",
+							"",
+							"function getMatchsideOfStreet(waypoints, isPost) {",
+							"    result=[]",
+							"    if (!isPost) {",
+							"        for (let i= 0; waypoints && i < waypoints.length; i++) { ",
+							"            var temp = waypoints[i].split(\";\")",
+							"            if (temp.includes(\"matchSideOfStreet\"))",
+							"                result.add(\"'Side of Street: matched'\");",
+							"            else",
+							"                result.add(\"'Side of Street: not matched'\");",
+							"        }",
+							"    } else {",
+							"        for (let i= 0; waypoints && i < waypoints.length; i++) { ",
+							"            if (waypoints[i].onRoad !== undefined && waypoints[i].onRoad.matchSideOfStreet == true)",
+							"                result.add(\"'Side of Street: matched'\");",
+							"            else",
+							"                result.add(\"'Side of Street: not matched'\");",
+							"        }",
+							"    }",
+							"    return result;",
+							"}",
+							"",
+							"function getRoadAccess(waypoints, isPost) {",
+							"    result=[]",
+							"    if (!isPost) {",
+							"        for (let i= 0; waypoints && i < waypoints.length; i++) { ",
+							"            var temp = waypoints[i].split(\"=\");",
+							"            temp_list=[]",
+							"            for (let i= 0; i<temp.length; i++) {",
+							"                temp_list.add(temp[i].split(\";\"));",
+							"            }",
+							"            temp = temp_list",
+							"            temp_index = temp.indexOf(\"roadAccess\");",
+							"            if (temp.includes(\"roadAccess\") == true )",
+							"                result.add(\"'Road Access at: \"+temp[temp_index+1]+\"'\");",
+							"            else",
+							"                result.add(\"'Road Access at: undefined'\");",
+							"        }",
+							"    } else {",
+							"        for (let i= 0; waypoints && i < waypoints.length; i++) { ",
+							"            if (waypoints[i].offRoad !== undefined && waypoints[i].offRoad.roadAccess !== undefined)",
+							"                result.add(\"'Radius: \"+waypoints[i].offRoad.roadAccess.latitude+\",\"+waypoints[i].offRoad.roadAccess.longitude+\"'\");",
+							"            else",
+							"                result.add(\"'Radius: undefined'\");",
+							"        }",
+							"    }",
+							"    return result;",
+							"}",
+							"",
+							"function getRadius(waypoints, isPost){",
+							"    result=[]",
+							"    if (!isPost) {",
+							"        for (let i= 0; waypoints && i <waypoints.length; i++) { ",
+							"            var temp = waypoints[i].split(\"=\");",
+							"            temp_list=[]",
+							"            for (let i= 0; i<temp.length; i++) {",
+							"                temp_list.add(temp[i].split(\";\"));",
+							"            }",
+							"            temp = temp_list",
+							"            temp_index = temp.indexOf(\"radius\");",
+							"            if (temp.includes(\"radius\") == true )",
+							"                result.add(\"'Radius: \"+temp[temp_index+1]+\"'\");",
+							"            else",
+							"                result.add(\"'Radius: undefined'\");",
+							"        }",
+							"    } else {",
+							"        for (let i= 0; waypoints && i< waypoints.length; i++) { ",
+							"            if (waypoints[i].manipulate !== undefined)",
+							"                result.add(\"'Radius: \"+waypoints[i].manipulate.radius+\"'\");",
+							"            else",
+							"                result.add(\"'Radius: undefined'\");",
+							"        }",
+							"    }",
+							"    return result;",
+							"}",
+							"",
+							"function getLayers(){",
+							"    layers=[]",
+							"    layers.add('transport,background,labels');",
+							"    try{",
+							"        if(pm.request.url.query.has(\"results\") !== undefined && (pm.request.url.query.toObject().results.includes(\"TOLL\") || pm.request.url.query.toObject().results.includes(\"MONETARY_COSTS\")))",
+							"            layers.add('toll');",
+							"        if(!pm.request.url.query.has(\"profile\") || pm.request.url.query.toObject().profile.includes(\"TRUCK\"))",
+							"            layers.add('restrictions');",
+							"        if(!pm.request.url.query.has(\"options[trafficMode]\") || pm.request.url.query.get(\"options[trafficMode]\") == \"REALISTIC\")",
+							"            layers.add('trafficIncidents,trafficPatterns');",
+							"    }catch(e){}",
+							"    return layers;",
+							"}",
+							"",
+							"function getEvents(events){",
+							"    if (events === undefined) { return '[]'; }",
+							"    for(let i =0; events && i < events.length; i++) {",
+							"        try{",
+							"            if (events[i].violation && events[i].violation.polyline) {",
+							"                events[i].violation.polyline = events[i].violation.polyline.split('\"').join('`');",
+							"            }",
+							"        }catch(e){}",
+							"    }",
+							"    return JSON.stringify(events).split(\"'\").join(\"\\\\'\");",
+							"}",
+							"",
+							"function getBlockIntersectingRoads(blockIntersectingRoads) {",
+							"    if (blockIntersectingRoads !== undefined) {",
+							"        var intersectingRoadsArray = blockIntersectingRoads.split('|').join(',`break`,') + ',`break`';",
+							"        return intersectingRoadsArray;",
+							"    }",
+							"    return undefined",
+							"}",
+							"",
+							"var visualizeByPolylineTemplate = `",
+							"<script>",
+							"$(function () {",
+							"    var mymap = L.map('mapid').setView([51.505, -0.09], 2);",
+							"    L.tileLayer('https://{{{hostname}}}/rastermaps/v1/image-tiles/{z}/{x}/{y}?layers={{layers}}&size=512&style=silkysand&apiKey={{{yourApiKey}}}', {",
+							"        maxZoom: 22,",
+							"    }).addTo(mymap);",
+							"  ",
+							"    var single_off_onroad = [{{{wpType}}}]; ",
+							"    var single_matchside_of_street = [{{{matchside}}}];  ",
+							"    var single_road_access = [{{{roadaccess}}}];  ",
+							"    var single_radius =[{{{radius}}}];",
+							"    var waypoints =[{{{waypoints}}}];",
+							"    var blockIntersectingRoads = [{{{blockIntersectingRoads}}}]",
+							"",
+							"    for(let i =0; waypoints && i < waypoints.length; i++) {",
+							"        try {",
+							"            var coord = new L.LatLng(waypoints[2*i],waypoints[2*i+1],0);",
+							"            color = i > 0 ? 'red' : 'green';",
+							"            L.circleMarker(coord, {color: color})",
+							"                .bindPopup('<b>Waypoint</b> '+waypoints[2*i]+', '+waypoints[2*i+1]+' <br> <b>'+single_off_onroad[i]+'</b> <br> <b>'+single_matchside_of_street[i]+'</b> <br> <b>'+single_road_access[i]+'</b> <br> <b>'+single_radius[i]+'</b>')",
+							"                .addTo(mymap);",
+							"        }",
+							"        catch (e) {",
+							"        }   ",
+							"    }",
+							"",
+							"    var events = JSON.parse('{{{events}}}');",
+							"    for(let i = 0; events && i < events.length; i++) {",
+							"        try {",
+							"            var dest = new L.LatLng(events[i].latitude,events[i].longitude,0);",
+							"            var maneuver = events[i].maneuver ? '<b>Maneuver:</b><BLOCKQUOTE><b>Type:</b>' + events[i].maneuver.type + '<br><b>Description:</b>' + events[i].maneuver.description + '</BLOCKQUOTE>' : '';",
+							"            var toll = events[i].toll ? '<b>Toll:</b><BLOCKQUOTE><b>Access type:</b>' + events[i].toll.accessType + '<br><b>Name:</b>' + events[i].toll.displayName + '</BLOCKQUOTE>': '';",
+							"            var violation = events[i].violation ? '<b>Violation:</b><BLOCKQUOTE><b>Access type:</b>' + events[i].violation.accessType + '<br><b>Type:</b>' + events[i].violation.type + '</BLOCKQUOTE>': '';",
+							"            var waypoint = events[i].waypoint ? '<b>Waypoint:</b><BLOCKQUOTE><b>Index: </b>' + events[i].waypoint.index + '</BLOCKQUOTE>' : '';",
+							"            var combinedTransport = events[i].combinedTransport ? '<b>Combined Transport:</b><BLOCKQUOTE><b>Name:</b>' + events[i].combinedTransport.name + '<br><b>Type:</b>' + events[i].combinedTransport.type + '<br><b>Access type:</b>' + events[i].combinedTransport.accessType + '</BLOCKQUOTE>' : '';",
+							"            var border = events[i].border ? '<b>Border:</b><BLOCKQUOTE><b>Country Code:</b>' + events[i].border.countryCode + '</BLOCKQUOTE>' : '';",
+							"            var utc = events[i].utcOffsetChange ? '<b>UTC Offset change:</b><BLOCKQUOTE><b>UTC offset:</b>' + events[i].utcOffsetChange.utcOffset + '</BLOCKQUOTE>': '';",
+							"            var traffic = events[i].traffic ? '<b>Traffic:</b><BLOCKQUOTE><b>Delay:</b>' + events[i].traffic.delay + '<br><b>Description:</b>' + events[i].traffic.description + '<br><b>Access type:</b>' + events[i].traffic.accessType + '</BLOCKQUOTE>': '';",
+							"            L.circleMarker(dest, {color: 'orange',radius:8})",
+							"                .bindPopup(",
+							"                    '<b>Eventpoint</b> '+ events[i].latitude + ', ' + events[i].longitude +",
+							"                    '<br><b>Distance from start:</b>' + events[i].distanceFromStart +",
+							"                    '<br><b>Traveltime from start:</b>' + events[i].travelTimeFromStart + '<br>' +",
+							"                    maneuver +",
+							"                    toll +",
+							"                    violation +",
+							"                    combinedTransport +",
+							"                    traffic +",
+							"                    border +",
+							"                    utc +",
+							"                    waypoint",
+							"                )",
+							"                .addTo(mymap);",
+							"            if (events[i].violation && events[i].violation.polyline) {",
+							"                var geojsonFeature = {",
+							"                    \"type\": \"Feature\"",
+							"                };",
+							"                var polyline = JSON.parse(events[i].violation.polyline.split('\\`').join('\"'));",
+							"                geojsonFeature.geometry = polyline;",
+							"                var geojson = L.geoJSON(geojsonFeature, {",
+							"                    color: 'red',",
+							"                    weight: 10,",
+							"                    opacity: 1,",
+							"                    smoothFactor: 0",
+							"                })",
+							"                .addTo(mymap);",
+							"            }",
+							"        }",
+							"        catch (e) {",
+							"        }   ",
+							"    }",
+							"",
+							"    if (blockIntersectingRoads !== undefined) {",
+							"        var intersectingPolyline = {type: 'LineString', coordinates: []};",
+							"        var coordinateCounter = 0;",
+							"        var pairCounter = 0;",
+							"        var lat = '';",
+							"        for (let i = 0; i < blockIntersectingRoads.length; i++) {",
+							"            if (blockIntersectingRoads[i] !== 'break') {",
+							"                if (pairCounter === 0) {",
+							"                    lat = blockIntersectingRoads[i];",
+							"                    pairCounter++;",
+							"                } else {",
+							"                   intersectingPolyline.coordinates.push([blockIntersectingRoads[i], lat]);",
+							"                   pairCounter = 0;",
+							"                   coordinateCounter++;",
+							"                }",
+							"            } else if (blockIntersectingRoads[i] === 'break') {",
+							"                var geojsonFeature = { 'type': 'Feature' };",
+							"                geojsonFeature.geometry = intersectingPolyline;",
+							"                var geojson = L.geoJSON(geojsonFeature, {",
+							"                    color: 'orange',",
+							"                    weight: 5,",
+							"                    opacity: 1,",
+							"                    smoothFactor: 0",
+							"                }).addTo(mymap);",
+							"                intersectingPolyline.coordinates = [];",
+							"                coordinateCounter = 0;",
+							"                pairCounter = 0;",
+							"            }",
+							"        }",
+							"    }",
+							"",
+							"    var geojsonFeature = {",
+							"        \"type\": \"Feature\"",
+							"    };",
+							"    geojsonFeature.geometry = {{{responseItem.polyline}}}",
+							"    var geojson = L.geoJSON(geojsonFeature, {",
+							"        color: 'blue',",
+							"        weight: 4,",
+							"        opacity: 1,",
+							"        smoothFactor: 0",
+							"    })",
+							"    .bindPopup('<b>Distance</b>  <br> {{responseItem.distance}} m <br> <b>Traveltime</b><br> {{responseItem.travelTime}} sec')",
+							"    .addTo(mymap);",
+							"",
+							"    mymap.fitBounds(geojson.getBounds());",
+							"});",
+							"</script>`;",
+							"",
+							"var visualizeByLineTemplate = `",
+							"<script>",
+							"$(function () {",
+							"    var mymap = L.map('mapid').setView([51.505, -0.09], 2);",
+							"    L.tileLayer('https://{{{hostname}}}/rastermaps/v1/image-tiles/{z}/{x}/{y}?layers={{layers}}&size=512&style=silkysand&apiKey={{{yourApiKey}}}', {",
+							"        maxZoom: 22,",
+							"    }).addTo(mymap);",
+							"   ",
+							"    var waypoints =[{{{waypoints}}}]",
+							"    var coordinates = []; ",
+							"",
+							"    for(let i =0; {{waypoints}} && i < {{waypoints.length}}; i++) {",
+							"        try {",
+							"            var coord = new L.LatLng(waypoints[2*i],waypoints[2*i+1],0);",
+							"            coordinates.push(coord);",
+							"            color = i > 0 ? 'red' : 'green';",
+							"            L.circleMarker(coord, {color: color})",
+							"                .bindPopup('<b>Waypoint</b>  \\\\n '+waypoints[2*i]+', '+waypoints[2*i+1]+' ')",
+							"                .addTo(mymap);",
+							"        }",
+							"        catch (e) {",
+							"        }   ",
+							"    }    ",
+							"    var polyline = new L.Polyline([coordinates], {",
+							"        color: 'blue',",
+							"        weight: 2,",
+							"        opacity: 1,",
+							"        smoothFactor: 0",
+							"    }).addTo(mymap);",
+							"",
+							"    mymap.fitBounds(coordinates);",
+							"});",
+							"</script>`;",
+							"",
+							"var response = JSON.parse(responseBody);",
+							"if (pm.response.code == 200) {",
+							"    isPost = false;",
+							"    if (!pm.request.body.isEmpty()) {",
+							"        waypoints = JSON.parse(pm.request.body.raw).waypoints;",
+							"        isPost = true;",
+							"    } else {",
+							"        waypoints = pm.request.url.query.toObject().waypoints;",
+							"    }",
+							"    if (response.polyline !== undefined) {",
+							"        pm.visualizer.set(baseTemplate.concat(visualizeByPolylineTemplate), {",
+							"            responseItem: response,",
+							"            wpType: getWpType(waypoints, isPost),",
+							"            radius: getRadius(waypoints, isPost),",
+							"            roadaccess: getRoadAccess(waypoints, isPost),",
+							"            matchside: getMatchsideOfStreet(waypoints, isPost),",
+							"            waypoints: getWaypointList(waypoints, isPost),",
+							"            yourApiKey: pm.environment.get(\"ApiKey\"),",
+							"            layers: getLayers(),",
+							"            events: getEvents(pm.response.json().events),",
+							"            hostname: pm.environment.get(\"hostname\"),",
+							"            blockIntersectingRoads: getBlockIntersectingRoads(pm.request.url.query.toObject()['options[blockIntersectingRoads]'])",
+							"        });",
+							"    } else {",
+							"        pm.visualizer.set(baseTemplate.concat(visualizeByLineTemplate), {",
+							"            responseItem: response,",
+							"            waypoints: getWaypointList(waypoints, isPost),",
+							"            yourApiKey: pm.environment.get(\"ApiKey\"),",
+							"            hostname: pm.environment.get(\"hostname\"),",
+							"            layers: getLayers()",
+							"        });",
+							"    }",
+							"}",
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Reachable Areas",
+			"item": [
+				{
+					"name": "Reachable Areas Synchronously",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "PTV-Internal-Return-Xserver-Request",
+								"value": "True",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_routing}}/reachable-areas?waypoint=49.0133618,8.4277972&horizons=100,200,300&horizonType=TRAVEL_TIME&options[drivingDirection]=OUTBOUND&options[trafficMode]=AVERAGE&profile=EUR_TRUCK_40T",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_routing}}",
+								"reachable-areas"
+							],
+							"query": [
+								{
+									"key": "waypoint",
+									"value": "49.0133618,8.4277972"
+								},
+								{
+									"key": "horizons",
+									"value": "100,200,300"
+								},
+								{
+									"key": "horizonType",
+									"value": "TRAVEL_TIME",
+									"description": "DISTANCE,TRAVEL_TIME"
+								},
+								{
+									"key": "options[drivingDirection]",
+									"value": "OUTBOUND",
+									"description": "OUTBOUND,INBOUND"
+								},
+								{
+									"key": "options[trafficMode]",
+									"value": "AVERAGE",
+									"description": "AVERAGE,REALISTIC"
+								},
+								{
+									"key": "profile",
+									"value": "EUR_TRUCK_40T",
+									"description": "EUR_TRAILER_TRUCK,EUR_TRUCK_40T,EUR_TRUCK_11_99_T,EUR_TRUCK_7_49T,EUR_VAN,EUR_CAR,USA_1_PICKUP"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reachable Areas Asynchronously",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"AreaId\", pm.response.json().id);\r",
+									"pm.collectionVariables.set(\"Horizon\", pm.response.json().id);\r",
+									"\r",
+									"horizon = [];\r",
+									"try{\r",
+									"    for (let i= pm.request.url.query.toObject().horizons.split(\",\").length-1; i>-1; i--) {\r",
+									"        horizon.add(pm.request.url.query.toObject().horizons.split(\",\")[i]);\r",
+									"    }\r",
+									"}catch(e){}\r",
+									"pm.collectionVariables.set(\"AsyncHorizon\", horizon);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "PTV-Internal-Return-Xserver-Request",
+								"value": "True",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_routing}}/reachable-areas?waypoint=49.0133618,8.4277972&profile=EUR_TRUCK_40T&horizons=2400&horizonType=TRAVEL_TIME&options[drivingDirection]=OUTBOUND",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_routing}}",
+								"reachable-areas"
+							],
+							"query": [
+								{
+									"key": "waypoint",
+									"value": "49.0133618,8.4277972"
+								},
+								{
+									"key": "profile",
+									"value": "EUR_TRUCK_40T",
+									"description": "EUR_TRAILER_TRUCK,EUR_TRUCK_40T,EUR_TRUCK_11_99_T,EUR_TRUCK_7_49T,EUR_VAN,EUR_CAR,USA_1_PICKUP"
+								},
+								{
+									"key": "horizons",
+									"value": "2400"
+								},
+								{
+									"key": "horizonType",
+									"value": "TRAVEL_TIME",
+									"description": "DISTANCE,TRAVEL_TIME"
+								},
+								{
+									"key": "options[drivingDirection]",
+									"value": "OUTBOUND",
+									"description": "OUTBOUND,INBOUND"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Reachable Areas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "PTV-Internal-Return-Xserver-Request",
+								"value": "True",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_routing}}/reachable-areas/{{AreaId}}",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_routing}}",
+								"reachable-areas",
+								"{{AreaId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "apikey",
+				"apikey": [
+					{
+						"key": "key",
+						"value": "ApiKey",
+						"type": "string"
+					},
+					{
+						"key": "value",
+						"value": "{{ApiKey}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var baseTemplate = `",
+							"<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.6.0/dist/leaflet.css\"",
+							"integrity=\"sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==\"crossorigin=\"\"/>",
+							"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js\" integrity=\"sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=\" crossorigin=\"anonymous\"></script>",
+							"<!-- Make sure you put this AFTER Leaflet's CSS -->",
+							"<script src=\"https://unpkg.com/leaflet@1.6.0/dist/leaflet.js\"integrity=\"sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==\"crossorigin=\"\"></script>",
+							"<div id=\"mapid\"></div>",
+							"<style>",
+							"#mapid { height: 100%; }",
+							"</style>`;",
+							"",
+							"",
+							"function getLayers(){",
+							"    layers=[]",
+							"    layers.add('transport,background,labels');",
+							"    try{",
+							"        if(pm.request.url.query.toObject().results.includes(\"TOLL\"))",
+							"            layers.add('toll');",
+							"        if(pm.request.url.query.toObject().profile.includes(\"TRUCK\"))",
+							"            layers.add('restrictions');",
+							"        if(pm.request.url.query.toObject().results.includes(\"POLYLINE\"))",
+							"            layers.add('trafficIncidents,trafficPatterns');",
+							"    }catch(e){}",
+							"    return layers;",
+							"}",
+							"",
+							"function getPolylinesFromResponse(response, polylineFormat) {",
+							"    var polylines = [];",
+							"    if (response.legs !== undefined && response.legs.length !== 0 && response.legs[0].polyline !== undefined) {",
+							"        response.legs.forEach((leg, index) => {",
+							"            polylines.add(leg.polyline);",
+							"        });",
+							"    } else if (response.polyline !== undefined) {",
+							"        polylines.add(response.polyline);",
+							"    }",
+							"    return polylines;",
+							"}",
+							"",
+							"function getAreasFromResponse(response, polylineFormat) {",
+							"    var areas = [];",
+							"    if (response.polygons !== undefined) {",
+							"        response.polygons.forEach((a, index) => {",
+							"        areas.add(a);",
+							"        });",
+							"    };",
+							"    if (response.reachableAreas !== undefined && response.reachableAreas.polygons !== undefined ) {",
+							"        response.reachableAreas.polygons.forEach((a, index) => {",
+							"        areas.add(a);",
+							"        });",
+							"    };",
+							"    return areas;",
+							"}",
+							"",
+							"function getHorizon() {",
+							"    horizon = [];",
+							"    try{",
+							"        for (let i= pm.request.url.query.toObject().horizons.split(\",\").length-1; i>-1; i--) {",
+							"            horizon.add(pm.request.url.query.toObject().horizons.split(\",\")[i]);",
+							"        }",
+							"    }catch(e){}",
+							"    return horizon",
+							"}",
+							"",
+							"",
+							"function getReplacementWaypoints(waypoints) {",
+							"    return `",
+							"    var waypoints = [[` + waypoints.join('],[').replace(new RegExp(';[a-zA-Z=]+'), '') + `]];",
+							"    var coordinates = [];",
+							"",
+							"    var start = new L.LatLng(waypoints[0][0], waypoints[0][1]);",
+							"    coordinates.push(start);",
+							"    L.circleMarker(start, {color: 'green'})",
+							"       .bindPopup('<b>Start</b>  \\\\n ' + waypoints[0].join(','))",
+							"       .addTo(mymap);",
+							"",
+							"    for (var i = 1; i < waypoints.length-1; i++) {",
+							"       var intermediate = new L.LatLng(waypoints[i][0],waypoints[i][1]);",
+							"       coordinates.push(intermediate);",
+							"       L.circleMarker(intermediate, {color: 'blue'})",
+							"           .bindPopup('<b>Intermediate</b>  \\\\n ' + waypoints[i].join(','))",
+							"           .addTo(mymap);",
+							"    }",
+							"",
+							"    var dest = new L.LatLng(waypoints[waypoints.length-1][0],waypoints[waypoints.length-1][1]);",
+							"    coordinates.push(dest);",
+							"    L.circleMarker(dest, {color: 'red'})",
+							"       .bindPopup('<b>Destination</b>  \\\\n ' + waypoints[waypoints.length-1].join(','))",
+							"       .addTo(mymap);",
+							"    `;",
+							"}",
+							"",
+							"function getReplacementEncodedPolyline(polylines) {",
+							"    return `",
+							"    var encoded = ['` + JSON.stringify(polylines.join(\"','\")).slice(1, -1) + `'];",
+							"    encoded.forEach((item, index) => {",
+							"        var coordinates = L.Polyline.fromEncoded(item).getLatLngs();",
+							"        var geojson = {",
+							"            \"type\": \"Feature\",",
+							"            \"geometry\": {",
+							"                \"type\": \"LineString\",",
+							"                \"coordinates\": []",
+							"            }",
+							"        }",
+							"        coordinates.forEach((item, index) => {",
+							"            geojson.geometry.coordinates.push([item.lng, item.lat]);",
+							"        });",
+							"        geojsonList.push(geojson);",
+							"    });",
+							"    `;",
+							"}",
+							"",
+							"function getReplacementGeojsonPolyline(polylines) {",
+							"    return `",
+							"    var polylines = ['` + polylines.join(\"','\") + `'];",
+							"    polylines.forEach((item, index) => {",
+							"        var geojson = {",
+							"            \"type\": \"Feature\",",
+							"            \"geometry\": JSON.parse(item)",
+							"        }",
+							"        geojsonList.push(geojson);",
+							"    });",
+							"    `;",
+							"}",
+							"",
+							"function getReplacementGeojsonAreas(areas) {",
+							"    return `",
+							"    var areas = ['` + areas.join(\"','\") + `'];",
+							"    areas.forEach((item, index) => {",
+							"        var geojson = {",
+							"            \"type\": \"Feature\",",
+							"            \"geometry\": JSON.parse(item)",
+							"        }",
+							"        geojsonList.push(geojson);",
+							"    });",
+							"    `;",
+							"}",
+							"",
+							"function formatDistance(distanceInMeters){",
+							"    return distanceInMeters/1000 + ' km';",
+							"}",
+							"",
+							"function formatTime(timeInSeconds) {",
+							"    var hours = Math.floor(timeInSeconds / (60*60));",
+							"    var minutes = Math.floor(timeInSeconds/60) - Math.floor(hours*60);",
+							"    var seconds = Math.floor(timeInSeconds) - Math.floor(hours*60*60) - Math.floor(minutes*60);",
+							"    return hours + ' h ' + minutes + ' min ' + seconds + ' sec (' + timeInSeconds + ' sec)';",
+							"}",
+							"",
+							"function getPolylineVisualisation(response, polylineFormat, waypoints) {",
+							"    var mainTemplate  = `",
+							"    <script>",
+							"    $(function () {",
+							"        var mymap = L.map('mapid').setView([51.505, -0.09], 2);",
+							"         L.tileLayer('https://{{{hostname}}}/rastermaps/v1/image-tiles/{z}/{x}/{y}?layers={{layers}}&size=512&style=silkysand&apiKey={{{yourApiKey}}}', {",
+							"        maxZoom: 22,",
+							"        }).addTo(mymap);",
+							"",
+							"        function getRandomColor() {",
+							"            var letters = '0123456789ABCDEF';",
+							"            var color = '#';",
+							"            for (var i = 0; i < 6; i++) {",
+							"                color += letters[Math.floor(Math.random() * 16)];",
+							"            }",
+							"            return color;",
+							"        }",
+							"",
+							"        //placeholder to be replaced with code, that prints waypoints",
+							"        <waypointsPlaceholder>",
+							"",
+							"        const geojsonList = [];",
+							"        // placeholder to be replaced with code, that fills the geojsonList",
+							"        <geojsonListGenerationPlaceholder>",
+							"",
+							"",
+							"        horizon=[{{{horizon}}}]",
+							"        for(let i =geojsonList.length; i > -1; i--) {",
+							"            var geojson = L.geoJSON(geojsonList[i], {",
+							"                color: getRandomColor(),",
+							"                weight: 4,",
+							"                opacity: 1,",
+							"                smoothFactor: 0",
+							"            })",
+							"            .bindPopup('<b>Horizon</b>  <br> ' + horizon[horizon.length-1-i])",
+							"            .addTo(mymap);",
+							"        }",
+							"",
+							"        mymap.fitBounds(geojson.getBounds()); ",
+							"    });",
+							"    </script>`;",
+							"",
+							"    if (waypoints !== undefined) {",
+							"        var replacement = getReplacementWaypoints(waypoints);",
+							"        mainTemplate = mainTemplate.replace(\"<waypointsPlaceholder>\", replacement);",
+							"    } else {",
+							"        mainTemplate = mainTemplate.replace(\"<waypointsPlaceholder>\", \"\");",
+							"    }",
+							"",
+							"    var polylines = getPolylinesFromResponse(response, polylineFormat);",
+							"",
+							"    if (polylines !== undefined && polylines.length > 0) {",
+							"        if (polylineFormat === \"GOOGLE_ENCODED_POLYLINE\") {",
+							"            var replacement = getReplacementEncodedPolyline(polylines);",
+							"            mainTemplate = mainTemplate.replace(\"<geojsonListGenerationPlaceholder>\", replacement);",
+							"        }",
+							"        if (polylineFormat === \"GEO_JSON\" || polylineFormat === undefined) {",
+							"            var replacement = getReplacementGeojsonPolyline(polylines);",
+							"            mainTemplate = mainTemplate.replace(\"<geojsonListGenerationPlaceholder>\", replacement);",
+							"        }",
+							"    }",
+							"",
+							"    var areas = getAreasFromResponse(response, polylineFormat);",
+							"    var replacement = getReplacementGeojsonAreas(areas);",
+							"    mainTemplate = mainTemplate.replace(\"<geojsonListGenerationPlaceholder>\", replacement);",
+							"    return mainTemplate;",
+							"}",
+							"",
+							"var request = pm.request.url.query.toObject();",
+							"var response = JSON.parse(responseBody);",
+							"",
+							"if (request.waypoint != undefined) {",
+							"    pm.visualizer.set(baseTemplate.concat(getPolylineVisualisation(response, request['options[polylineFormat]'], request.waypoints)), {",
+							"        responseItem: response,",
+							"        request: pm.request,",
+							"        yourApiKey: pm.environment.get(\"ApiKey\"),",
+							"        layers: getLayers(),",
+							"        horizon: getHorizon(),",
+							"        hostname:pm.environment.get(\"hostname\")",
+							"    });",
+							"}",
+							"else{",
+							"    pm.visualizer.set(baseTemplate.concat(getPolylineVisualisation(response, request['options[polylineFormat]'], request.waypoints)), {",
+							"        responseItem: response,",
+							"        request: pm.request,",
+							"        yourApiKey: pm.environment.get(\"ApiKey\"),",
+							"        layers: getLayers(),",
+							"        horizon: pm.collectionVariables.get(\"AsyncHorizon\"),",
+							"        hostname:pm.environment.get(\"hostname\")",
+							"    });",
+							"}"
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Reachable Location",
+			"item": [
+				{
+					"name": "Calculate Reachable Locations",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"result = []\r",
+									"rawBody = pm.request.body.raw\r",
+									"latitude_list = rawBody.split('\"latitude\": ');\r",
+									"longitude_list = rawBody.split('\"longitude\": ');\r",
+									"for (let i = 1; i < latitude_list.length; i++) {\r",
+									"    single_latitude = latitude_list[i].split(\",\")[0];\r",
+									"    result.add(single_latitude);\r",
+									"    single_longitude = longitude_list[i].split(\"}\")[0];\r",
+									"    result.add(single_longitude);\r",
+									"}\r",
+									"pm.collectionVariables.set(\"LocationPoints\", result);\r",
+									"pm.collectionVariables.set(\"LocationId\", pm.response.json().id);\r",
+									"pm.collectionVariables.set(\"LocationStartpoint\", pm.request.url.query.toObject().waypoint);\r",
+									"pm.collectionVariables.set(\"LocationHorizon\", pm.request.url.query.toObject().horizon);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"locations\": [\r\n{\"latitude\": 49.01358,\"longitude\": 8.42973},\r\n{\"latitude\": 49.01331,\"longitude\": 8.43088}\r\n]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_routing}}/reachable-locations?waypoint=49.01312,8.4277972&profile=EUR_TRUCK_40T&horizon=200&horizonType=DISTANCE&options[drivingDirection]=OUTBOUND",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_routing}}",
+								"reachable-locations"
+							],
+							"query": [
+								{
+									"key": "waypoint",
+									"value": "49.01312,8.4277972"
+								},
+								{
+									"key": "profile",
+									"value": "EUR_TRUCK_40T",
+									"description": "EUR_TRAILER_TRUCK,EUR_TRUCK_40T,EUR_TRUCK_11_99_T,EUR_TRUCK_7_49T,EUR_VAN,EUR_CAR,USA_1_PICKUP,USA_5_DELIVERY,USA_8_SEMITRAILER_5AXLE,AUS_LCV_LIGHT_COMMERCIAL,AUS_MR_MEDIUM_RIGID,AUS_HR_HEAVY_RIGID,IMEA_TRUCK_40T,IMEA_TRUCK_7_49T,IMEA_VAN,IMEA_CAR"
+								},
+								{
+									"key": "horizon",
+									"value": "200"
+								},
+								{
+									"key": "horizonType",
+									"value": "DISTANCE",
+									"description": "DISTANCE,TRAVEL_TIME"
+								},
+								{
+									"key": "options[drivingDirection]",
+									"value": "OUTBOUND"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Reachable Locations",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var baseTemplate = `\r",
+									"<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.6.0/dist/leaflet.css\"\r",
+									"integrity=\"sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==\"crossorigin=\"\"/>\r",
+									"\r",
+									"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js\" integrity=\"sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=\" crossorigin=\"anonymous\"></script>\r",
+									"<!-- Make sure you put this AFTER Leaflet's CSS -->\r",
+									"\r",
+									"<script src=\"https://unpkg.com/leaflet@1.6.0/dist/leaflet.js\"integrity=\"sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==\"crossorigin=\"\"></script>\r",
+									"<div id=\"mapid\"></div>\r",
+									"<style>\r",
+									"#mapid { height: 100%; }\r",
+									"</style>`;\r",
+									"\r",
+									"\r",
+									"function getLayers(){\r",
+									"    layers=[]\r",
+									"    layers.add('transport,background,labels');\r",
+									"    try{\r",
+									"        if(pm.request.url.query.toObject().results.includes(\"TOLL\"))\r",
+									"            layers.add('toll');\r",
+									"        if(pm.request.url.query.toObject().profile.includes(\"TRUCK\"))\r",
+									"            layers.add('restrictions');\r",
+									"        if(pm.request.url.query.toObject().results.includes(\"POLYLINE\"))\r",
+									"            layers.add('trafficIncidents,trafficPatterns');\r",
+									"    }catch(e){}\r",
+									"    return layers;\r",
+									"}\r",
+									"\r",
+									"\r",
+									"var visualizeTemplate = `\r",
+									"<script>\r",
+									"$(function () {\r",
+									"    var mymap = L.map('mapid').setView([51.505, -0.09],2);\r",
+									"    L.tileLayer('https://{{{hostname}}}/rastermaps/v1/image-tiles/{z}/{x}/{y}?layers={{layers}}&size=512&style=silkysand&apiKey={{{yourApiKey}}}', {\r",
+									"        maxZoom: 22,\r",
+									"    }).addTo(mymap);\r",
+									"\r",
+									"    var coordinates = [];\r",
+									"    var points=[{{points}}];\r",
+									"    var startpoint=[{{{startpoint}}}];\r",
+									"    var reachableLocations=[{{{reachableLocations}}}];\r",
+									"    var unreachableLocations=[{{{unreachableLocations}}}];\r",
+									"    var reachablePointsLength=[{{{reachablePointsLength}}}];\r",
+									"    var horizon={{{horizon}}}\r",
+									"\r",
+									"    try {\r",
+									"        var dest = new L.LatLng(startpoint[0],startpoint[1],0);\r",
+									"        coordinates.push(dest);\r",
+									"        L.circleMarker(dest, {color: 'Blue'})\r",
+									"            .bindPopup('<b>Startpoint</b> '+startpoint[0]+', '+startpoint[1]+' <br> <b>Horizon</b>: '+horizon+' m ')\r",
+									"            .addTo(mymap);\r",
+									"    }\r",
+									"    catch (e) {}\r",
+									"    \r",
+									"    for(let i =0; i < 2; i++) {\r",
+									"        try {\r",
+									"            var dest = new L.LatLng(points[2*i],points[2*i+1],0);\r",
+									"            coordinates.push(dest);\r",
+									"            if (reachableLocations[3*i]==i)\r",
+									"                L.circleMarker(dest, {color: 'green'})\r",
+									"                    .bindPopup('<b>Waypoint</b> '+points[2*i]+', '+points[2*i+1]+' <br> <b>Distance</b>: '+reachableLocations[3*i+1]+' m <br> <b>Traveltime</b>: '+reachableLocations[3*i+2]+' sec')\r",
+									"                    .addTo(mymap);\r",
+									"            else\r",
+									"                L.circleMarker(dest, {color: 'red'})\r",
+									"                    .bindPopup('<b>Waypoint</b> '+points[2*i]+', '+points[2*i+1]+' <br> <b>Not Reachable</b> ')\r",
+									"                    .addTo(mymap);\r",
+									"\r",
+									"        }\r",
+									"        catch (e) {}   \r",
+									"    }\r",
+									"    mymap.fitBounds(coordinates);\r",
+									"});\r",
+									"</script>`;\r",
+									"\r",
+									"reachable_Locations_raw=pm.response.json().reachableLocations.reachable;\r",
+									"reachable_Locations=[]\r",
+									"for(let i =0; i < reachable_Locations_raw.length; i++) {\r",
+									"    reachable_Locations.add([[reachable_Locations_raw[i].index,reachable_Locations_raw[i].distance,reachable_Locations_raw[i].travelTime]])\r",
+									"}\r",
+									"console.log(reachable_Locations)\r",
+									"unreachable_Locations=pm.response.json().reachableLocations.unreachable;\r",
+									"reachable_points_length=reachable_Locations.length+unreachable_Locations.length;\r",
+									"var response = JSON.parse(responseBody);\r",
+									"\r",
+									"pm.visualizer.set(baseTemplate.concat(visualizeTemplate), {\r",
+									"    responseItem: response,\r",
+									"    request: pm.request,\r",
+									"    yourApiKey: pm.environment.get(\"ApiKey\"),\r",
+									"    points: pm.collectionVariables.get(\"LocationPoints\"),\r",
+									"    reachableLocations: reachable_Locations,\r",
+									"    unreachableLocations: unreachable_Locations,\r",
+									"    reachablePointsLength: reachable_points_length,\r",
+									"    layers: getLayers(),\r",
+									"    startpoint: pm.collectionVariables.get(\"LocationStartpoint\"),\r",
+									"    horizon: pm.collectionVariables.get(\"LocationHorizon\"),\r",
+									"    hostname:pm.environment.get(\"hostname\")\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "PTV-Internal-Return-Xserver-Request",
+								"value": "True",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_routing}}/reachable-locations/{{LocationId}}",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_routing}}",
+								"reachable-locations",
+								"{{LocationId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "apikey",
+				"apikey": [
+					{
+						"key": "value",
+						"value": "{{ApiKey}}",
+						"type": "string"
+					},
+					{
+						"key": "key",
+						"value": "ApiKey",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Alternative Routes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var baseTemplate = `\r",
+							"<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.6.0/dist/leaflet.css\"\r",
+							"integrity=\"sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==\"\r",
+							"crossorigin=\"\"/>\r",
+							"\r",
+							"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js\" integrity=\"sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=\" crossorigin=\"anonymous\"></script>\r",
+							"\r",
+							"<!-- Make sure you put this AFTER Leaflet's CSS -->\r",
+							"<script src=\"https://unpkg.com/leaflet@1.6.0/dist/leaflet.js\"\r",
+							"integrity=\"sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==\"\r",
+							"crossorigin=\"\"></script>\r",
+							"\r",
+							"<div id=\"mapid\"></div>\r",
+							"<style>\r",
+							"#mapid { height: 100%; }\r",
+							"</style>`;\r",
+							"\r",
+							"\r",
+							"function getWaypointList(waypoints){\r",
+							"    result=[]\r",
+							"    for (let i= 0; i<waypoints.length; i++) {\r",
+							"        if (i >0) {result}\r",
+							"        result.add(waypoints[i].split(\";\")[0]);\r",
+							"    }\r",
+							"    return result;\r",
+							"}\r",
+							"\r",
+							"function getTraveltime(){\r",
+							"    result=[]\r",
+							"    for (let i= 0; i<pm.response.json().alternativeRoutes.length; i++) {\r",
+							"        if (i >0) {result}\r",
+							"        result.add(pm.response.json().alternativeRoutes[i].travelTime);\r",
+							"    }\r",
+							"    return result;\r",
+							"}\r",
+							"\r",
+							"function getDistance(){\r",
+							"    result=[]\r",
+							"    for (let i= 0; i<pm.response.json().alternativeRoutes.length; i++) {\r",
+							"        if (i >0) {result}\r",
+							"        result.add(pm.response.json().alternativeRoutes[i].distance);\r",
+							"    }\r",
+							"    return result;\r",
+							"}\r",
+							"\r",
+							"function getPolyline()\r",
+							"{\r",
+							"    result=[]\r",
+							"    for (let i= 0; i<pm.response.json().alternativeRoutes.length; i++) {\r",
+							"        if (i >0) {result}\r",
+							"        result.add(pm.response.json().alternativeRoutes[i].polyline);\r",
+							"    }\r",
+							"    return result;\r",
+							"}\r",
+							"\r",
+							"function getOffOnraod(){\r",
+							"    result=[]\r",
+							"    for (let i= 0; i<pm.request.url.query.toObject().waypoints.length; i++) { \r",
+							"        var temp = pm.request.url.query.toObject().waypoints[i].split(\";\")\r",
+							"        if (temp.includes(\"includeLastMeters\") == true )\r",
+							"            result.add(\"'Offroad'\");\r",
+							"        else\r",
+							"            result.add(\"'Onroad'\");\r",
+							"    }\r",
+							"    return result;\r",
+							"}\r",
+							"\r",
+							"function getMatchsideOfStreet(){\r",
+							"    result=[]\r",
+							"    for (let i= 0; i<pm.request.url.query.toObject().waypoints.length; i++) { \r",
+							"        var temp = pm.request.url.query.toObject().waypoints[i].split(\";\")\r",
+							"        if (temp.includes(\"matchSideOfStreet\") == true )\r",
+							"            result.add(\"'Side of Street matched'\");\r",
+							"        else\r",
+							"            result.add(\"'Side of Street not matched'\");\r",
+							"    }\r",
+							"    return result;\r",
+							"}\r",
+							"\r",
+							"function getRoadAccess(){\r",
+							"    result=[]\r",
+							"    for (let i= 0; i<pm.request.url.query.toObject().waypoints.length; i++) { \r",
+							"        var temp = pm.request.url.query.toObject().waypoints[i].split(\";\")\r",
+							"        if (temp.length > 1)\r",
+							"            temp = temp[1].split(\"=\");\r",
+							"        if (temp.includes(\"roadAccess\") == true )\r",
+							"            result.add(\"'Road Access at: \"+temp[1]+\"'\");\r",
+							"        else\r",
+							"            result.add(\"'Road Access at: undefined'\");\r",
+							"    }\r",
+							"    return result;\r",
+							"}\r",
+							"\r",
+							"function getRadius(){\r",
+							"    result=[]\r",
+							"    for (let i= 0; i<pm.request.url.query.toObject().waypoints.length; i++) { \r",
+							"        var temp = pm.request.url.query.toObject().waypoints[i].split(\"=\");\r",
+							"        temp_list=[]\r",
+							"        for (let i= 0; i<temp.length; i++) {\r",
+							"            temp_list.add(temp[i].split(\";\"));\r",
+							"        }\r",
+							"        temp = temp_list\r",
+							"        temp_index = temp.indexOf(\"radius\");\r",
+							"        if (temp.includes(\"radius\") == true )\r",
+							"            result.add(\"'Radius: \"+temp[temp_index+1]+\"'\");\r",
+							"        else\r",
+							"            result.add(\"'Radius: undefined'\");\r",
+							"    }\r",
+							"    return result;\r",
+							"}\r",
+							"\r",
+							"function getLayers(){\r",
+							"    layers=[]\r",
+							"    layers.add('transport,background,labels');\r",
+							"    try{\r",
+							"        if(pm.request.url.query.toObject().results.includes(\"TOLL\"))\r",
+							"            layers.add('toll');\r",
+							"        if(pm.request.url.query.toObject().profile.includes(\"TRUCK\"))\r",
+							"            layers.add('restrictions');\r",
+							"        if(pm.request.url.query.toObject().results.includes(\"POLYLINE\"))\r",
+							"            layers.add('trafficIncidents,trafficPatterns');\r",
+							"    }catch(e){}\r",
+							"    return layers;\r",
+							"}\r",
+							"\r",
+							"function getEvents(events){",
+							"    if (events === undefined) { return '[]'; }",
+							"    for(let i =0; events && i < events.length; i++) {",
+							"        try{",
+							"            if (events[i].violation && events[i].violation.polyline) {",
+							"                events[i].violation.polyline = events[i].violation.polyline.split('\"').join('`');",
+							"            }",
+							"        }catch(e){}",
+							"    }",
+							"    return JSON.stringify(events).split(\"'\").join(\"\\\\'\");",
+							"}",
+							"\r",
+							"var visualizeByPolylineTemplate = `\r",
+							"<script>\r",
+							"$(function () {\r",
+							"    var mymap = L.map('mapid').setView([51.505, -0.09], 2);\r",
+							"    L.tileLayer('https://{{{hostname}}}/rastermaps/v1/image-tiles/{z}/{x}/{y}?layers={{layers}}&size=512&style=silkysand&apiKey={{{yourApiKey}}}', {\r",
+							"        maxZoom: 22,\r",
+							"    }).addTo(mymap);\r",
+							"  \r",
+							"    var coordinates = [];\r",
+							"    var single_off_onroad = [{{{offOnraod}}}]; \r",
+							"    var single_matchside_of_street = [{{{matchside}}}];  \r",
+							"    var single_road_access = [{{{roadaccess}}}];  \r",
+							"    var single_radius =[{{{radius}}}];\r",
+							"    var waypoints =[{{{waypoints}}}]\r",
+							"\r",
+							"    try {\r",
+							"        var start = new L.LatLng(waypoints[0],waypoints[1],0);\r",
+							"        coordinates.push(start);\r",
+							"        L.circleMarker(start, {color: 'green'})\r",
+							"            .bindPopup('<b>Start</b> '+waypoints[0]+', '+waypoints[1]+' <br> <b>'+single_off_onroad[0]+'</b> <br> <b>'+single_matchside_of_street[0]+'</b> <br> <b>'+single_road_access[0]+'</b> <br> <b>'+single_radius[0]+'</b>'\r",
+							"        ).addTo(mymap);\r",
+							"    }\r",
+							"      catch (e) {\r",
+							"    }        \r",
+							" \r",
+							"    for(let i =1; i < {{queryRequest.waypoints.length}}; i++) {\r",
+							"        try {\r",
+							"            var dest = new L.LatLng(waypoints[2*i],waypoints[2*i+1],0);\r",
+							"            coordinates.push(dest);\r",
+							"            L.circleMarker(dest, {color: 'red'})\r",
+							"                .bindPopup('<b>Waypoint</b> '+waypoints[2*i]+', '+waypoints[2*i+1]+' <br> <b>'+single_off_onroad[i]+'</b> <br> <b>'+single_matchside_of_street[i]+'</b> <br> <b>'+single_road_access[i]+'</b> <br> <b>'+single_radius[i]+'</b>')\r",
+							"                .addTo(mymap);\r",
+							"        }\r",
+							"        catch (e) {\r",
+							"        }   \r",
+							"    }\r",
+							"\r",
+							"    var events = JSON.parse('{{{events}}}');",
+							"    for(let i = 0; events && i < events.length; i++) {",
+							"        try {",
+							"            var dest = new L.LatLng(events[i].latitude,events[i].longitude,0);",
+							"            var maneuver = events[i].maneuver ? '<b>Maneuver:</b><BLOCKQUOTE><b>Type:</b>' + events[i].maneuver.type + '<br><b>Description:</b>' + events[i].maneuver.description + '</BLOCKQUOTE>' : '';",
+							"            var toll = events[i].toll ? '<b>Toll:</b><BLOCKQUOTE><b>Access type:</b>' + events[i].toll.accessType + '<br><b>Name:</b>' + events[i].toll.displayName + '</BLOCKQUOTE>': '';",
+							"            var violation = events[i].violation ? '<b>Violation:</b><BLOCKQUOTE><b>Access type:</b>' + events[i].violation.accessType + '<br><b>Type:</b>' + events[i].violation.type + '</BLOCKQUOTE>': '';",
+							"            var waypoint = events[i].waypoint ? '<b>Waypoint:</b><BLOCKQUOTE><b>Index: </b>' + events[i].waypoint.index + '</BLOCKQUOTE>' : '';",
+							"            var combinedTransport = events[i].combinedTransport ? '<b>Combined Transport:</b><BLOCKQUOTE><b>Name:</b>' + events[i].combinedTransport.name + '<br><b>Type:</b>' + events[i].combinedTransport.type + '<br><b>Access type:</b>' + events[i].combinedTransport.accessType + '</BLOCKQUOTE>' : '';",
+							"            var border = events[i].border ? '<b>Border:</b><BLOCKQUOTE><b>Country Code:</b>' + events[i].border.countryCode + '</BLOCKQUOTE>' : '';",
+							"            var utc = events[i].utcOffsetChange ? '<b>UTC Offset change:</b><BLOCKQUOTE><b>UTC offset:</b>' + events[i].utcOffsetChange.utcOffset + '</BLOCKQUOTE>': '';",
+							"            var traffic = events[i].traffic ? '<b>Traffic:</b><BLOCKQUOTE><b>Delay:</b>' + events[i].traffic.delay + '<br><b>Description:</b>' + events[i].traffic.description + '<br><b>Access type:</b>' + events[i].traffic.accessType + '</BLOCKQUOTE>': '';",
+							"            L.circleMarker(dest, {color: 'orange',radius:8})",
+							"                .bindPopup(",
+			  				"                    '<b>Eventpoint</b> '+ events[i].latitude + ', ' + events[i].longitude +",
+							"                    '<br><b>Distance from start:</b>' + events[i].distanceFromStart +",
+							"                    '<br><b>Traveltime from start:</b>' + events[i].travelTimeFromStart + '<br>' +",
+							"                    maneuver +",
+							"                    toll +",
+							"                    violation +",
+							"                    combinedTransport +",
+							"                    traffic +",
+							"                    border +",
+							"                    utc +",
+							"                    waypoint",
+							"                )",
+							"                .addTo(mymap);",
+							"            if (events[i].violation && events[i].violation.polyline) {",
+							"                var geojsonFeature = {",
+							"                    \"type\": \"Feature\"",
+							"                };",
+							"                var polyline = JSON.parse(events[i].violation.polyline.split('\\`').join('\"'));",
+							"                geojsonFeature.geometry = polyline;",
+							"                var geojson = L.geoJSON(geojsonFeature, {",
+							"                    color: 'red',",
+							"                    weight: 10,",
+							"                    opacity: 1,",
+							"                    smoothFactor: 0",
+							"                })",
+							"                .addTo(mymap);",
+							"            }",
+							"        }",
+							"        catch (e) {",
+							"        }   ",
+							"    }",
+							"\r",
+							"    var geojsonFeature = {\r",
+							"        \"type\": \"Feature\"\r",
+							"    };\r",
+							"\r",
+							"    var single_traveltime = [{{{traveltime}}}]\r",
+							"    var single_distance = [{{{distance}}}]\r",
+							"    var single_polyline= [{{{polyline}}}]\r",
+							"    var colors = [\"orange\",\"yellow\",\"green\",\"gray\",\"red\",\"brown\",\"orange\",\"black\",\"violet\"]\r",
+							"    geojsonFeature.geometry = {{{responseItem.polyline}}}\r",
+							"    \r",
+							"    var geojson = L.geoJSON(geojsonFeature, {\r",
+							"        color: 'blue',\r",
+							"        weight: 14,\r",
+							"        opacity: 1,\r",
+							"        smoothFactor: 0\r",
+							"    })\r",
+							"    .bindPopup('<b>Distance</b>  <br> {{responseItem.distance}} m <br> <b>Traveltime</b><br> {{responseItem.travelTime}} sec')\r",
+							"    .addTo(mymap);\r",
+							"\r",
+							"    for(let i =0; i < {{{responseItem.alternativeRoutes.length}}}; i++) {\r",
+							"\r",
+							"        geojsonFeature.geometry = single_polyline[i]\r",
+							"        var geojson = L.geoJSON(geojsonFeature, {\r",
+							"            color: colors[i],\r",
+							"            smoothFactor: 0,\r",
+							"            weight: 9-(i*3),\r",
+							"            opacity: 1\r",
+							"        })\r",
+							"        .bindPopup('<b>Distance</b>  <br> '+single_distance[i]+' m <br> <b>Traveltime</b><br> '+single_traveltime[i]+' sec')\r",
+							"        .addTo(mymap);\r",
+							"    }\r",
+							"\r",
+							"\r",
+							"    mymap.fitBounds(geojson.getBounds());\r",
+							"});\r",
+							"</script>`;\r",
+							"\r",
+							"var visualizeByLineTemplate = `\r",
+							"<script>\r",
+							"$(function () {\r",
+							"    var mymap = L.map('mapid').setView([51.505, -0.09], 2);\r",
+							"    L.tileLayer('https://{{{hostname}}}/rastermaps/v1/image-tiles/{z}/{x}/{y}?layers={{layers}}&size=512&style=silkysand&apiKey={{{yourApiKey}}}', {\r",
+							"        maxZoom: 22,\r",
+							"    }).addTo(mymap);\r",
+							"   \r",
+							"    var waypoints =[{{{waypoints}}}]\r",
+							"    var coordinates = [];\r",
+							"    try {\r",
+							"        var start = new L.LatLng(waypoints[0],waypoints[1],0);\r",
+							"        coordinates.push(start);\r",
+							"        L.circleMarker(start, {color: 'green'})\r",
+							"            .bindPopup('<b>Start</b>  \\\\n '+waypoints[0]+', '+waypoints[1]+' ')\r",
+							"            .addTo(mymap);\r",
+							"    }\r",
+							"      catch (e) {\r",
+							"    }    \r",
+							"\r",
+							"    for(let i =1; i < {{queryRequest.waypoints.length}}; i++) {\r",
+							"        try {\r",
+							"            var dest = new L.LatLng(waypoints[2*i],waypoints[2*i+1],0);\r",
+							"            coordinates.push(dest);\r",
+							"            L.circleMarker(dest, {color: 'red'})\r",
+							"                .bindPopup('<b>Waypoint</b>  \\\\n '+waypoints[2*i]+', '+waypoints[2*i+1]+' ')\r",
+							"                .addTo(mymap);\r",
+							"        }\r",
+							"        catch (e) {\r",
+							"        }   \r",
+							"    }\r",
+							"\r",
+							"    for(let i =1; i < {{queryRequest.waypoints.length}}; i++) {\r",
+							"        var polyline = new L.Polyline([coordinates], {\r",
+							"            color: 'blue',\r",
+							"            weight: 2,\r",
+							"            opacity: 1,\r",
+							"            smoothFactor: 0\r",
+							"        }).addTo(mymap);   \r",
+							"    }    \r",
+							"        \r",
+							"        \r",
+							"\r",
+							"    mymap.fitBounds(coordinates);\r",
+							"});\r",
+							"</script>`;\r",
+							"\r",
+							"var response = JSON.parse(responseBody);\r",
+							"\r",
+							"\r",
+							"//Todo\r",
+							"if (response.polyline !== undefined) \r",
+							"//if (pm.request.url.query.toObject().results === \"polyline\")\r",
+							"//if (JSON.stringify(responseBody.has(\"polyline\")))\r",
+							"{\r",
+							"    pm.visualizer.set(baseTemplate.concat(visualizeByPolylineTemplate), {\r",
+							"        responseItem: response,\r",
+							"        request: pm.request,\r",
+							"        offOnraod: getOffOnraod(),\r",
+							"        radius: getRadius(),\r",
+							"        roadaccess: getRoadAccess(),\r",
+							"        matchside: getMatchsideOfStreet(),\r",
+							"        queryRequest: pm.request.url.query.toObject(),\r",
+							"        waypoints: getWaypointList(pm.request.url.query.toObject().waypoints),\r",
+							"        traveltime: getTraveltime(),\r",
+							"        distance: getDistance(),\r",
+							"        polyline: getPolyline(),\r",
+							"        yourApiKey: pm.environment.get(\"ApiKey\"),\r",
+							"        layers: getLayers(),\r",
+							"        events: getEvents(pm.response.json().events),\r",
+							"        hostname:pm.environment.get(\"hostname\")\r",
+							"    });\r",
+							"}\r",
+							"else\r",
+							"{\r",
+							"    pm.visualizer.set(baseTemplate.concat(visualizeByLineTemplate), {\r",
+							"        responseItem: response,\r",
+							"        request: pm.request,\r",
+							"        waypoints: getWaypointList(pm.request.url.query.toObject().waypoints),\r",
+							"        queryRequest: pm.request.url.query.toObject(),\r",
+							"        yourApiKey: pm.environment.get(\"ApiKey\"),\r",
+							"        layers: getLayers(),\r",
+							"        hostname:pm.environment.get(\"hostname\")\r",
+							"    });\r",
+							"}\r",
+							"//console.log(pm.request.url.query.toObject().waypoints.length)\r",
+							"//console.log(response.polyline === undefined)\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "PTV-Internal-Return-Xserver-Request",
+						"value": "True",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{protocol}}://{{hostname}}/{{apiprefix_routing}}/routes?waypoints=49.06560,8.47087;roadAccess=49.06568,8.47184;matchSideOfStreet&waypoints=52.5168476,13.4033203;matchSideOfStreet&options[trafficMode]=AVERAGE&results=ALTERNATIVE_ROUTES,ROUTE_ID,MANEUVER_EVENTS,POLYLINE&profile=EUR_TRAILER_TRUCK",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"{{apiprefix_routing}}",
+						"routes"
+					],
+					"query": [
+						{
+							"key": "waypoints",
+							"value": "49.06560,8.47087;roadAccess=49.06568,8.47184;matchSideOfStreet",
+							"description": "roadAccess,matchSideOfStreet  Only 2 Waypoints"
+						},
+						{
+							"key": "waypoints",
+							"value": "52.5168476,13.4033203;matchSideOfStreet",
+							"description": "matchSideOfStreet Only 2 Waypoints"
+						},
+						{
+							"key": "options[trafficMode]",
+							"value": "AVERAGE",
+							"description": "AVERAGE,REALISTIC"
+						},
+						{
+							"key": "results",
+							"value": "ALTERNATIVE_ROUTES,ROUTE_ID,MANEUVER_EVENTS,POLYLINE",
+							"description": "ALTERNATIVE_ROUTES,ROUTE_ID,POLYLINE,MANEUVER_EVENTS,TOLL_COSTS"
+						},
+						{
+							"key": "profile",
+							"value": "EUR_TRAILER_TRUCK",
+							"description": "EUR_TRAILER_TRUCK,EUR_TRUCK_40T,EUR_TRUCK_11_99_T,EUR_TRUCK_7_49T,EUR_VAN,EUR_CAR,USA_1_PICKUP,USA_5_DELIVERY,USA_8_SEMITRAILER_5AXLE,AUS_LCV_LIGHT_COMMERCIAL,AUS_MR_MEDIUM_RIGID,AUS_HR_HEAVY_RIGID,IMEA_TRUCK_40T,IMEA_TRUCK_7_49T,IMEA_VAN,IMEA_CAR"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{ApiKey}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "ApiKey",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "AreaId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "AsyncHorizon",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "LocationId",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "LocationPoints",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "LocationStartpoint",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "LocationHorizon",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

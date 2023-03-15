@@ -1,0 +1,636 @@
+{
+	"info": {
+		"_postman_id": "623dc98d-c529-4a2e-b90e-1af96e29e59d",
+		"name": "PTV Developer Geocoding API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12119074"
+	},
+	"item": [
+		{
+			"name": "Locations",
+			"item": [
+				{
+					"name": "Locations By Address",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_geocoding}}/locations/by-address?country=Spain&locality=Barcelona&street=Carlos",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_geocoding}}",
+								"locations",
+								"by-address"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "Spain"
+								},
+								{
+									"key": "state",
+									"value": "Cataluna",
+									"disabled": true
+								},
+								{
+									"key": "postalCode",
+									"value": "08037",
+									"disabled": true
+								},
+								{
+									"key": "locality",
+									"value": "Barcelona"
+								},
+								{
+									"key": "street",
+									"value": "Carlos"
+								},
+								{
+									"key": "houseNumber",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Locations By Text",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_geocoding}}/locations/by-text?searchText=haid und neu straße 13",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_geocoding}}",
+								"locations",
+								"by-text"
+							],
+							"query": [
+								{
+									"key": "searchText",
+									"value": "haid und neu straße 13"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Locations By Position",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_geocoding}}/locations/by-position/:latitude/:longitude",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_geocoding}}",
+								"locations",
+								"by-position",
+								":latitude",
+								":longitude"
+							],
+							"variable": [
+								{
+									"key": "latitude",
+									"value": "41.82806439562093"
+								},
+								{
+									"key": "longitude",
+									"value": "-71.40672191977501"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "apikey",
+				"apikey": [
+					{
+						"key": "key",
+						"value": "ApiKey",
+						"type": "string"
+					},
+					{
+						"key": "value",
+						"value": "{{ApiKey}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Places",
+			"item": [
+				{
+					"name": "Places By Text",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_geocoding}}/places/by-text?searchText=Karlsruhe",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_geocoding}}",
+								"places",
+								"by-text"
+							],
+							"query": [
+								{
+									"key": "searchText",
+									"value": "Karlsruhe"
+								},
+								{
+									"key": "categoryFilter",
+									"value": "navteq-lcms:100-1000-0000",
+									"disabled": true
+								},
+								{
+									"key": "countryFilter",
+									"value": "US",
+									"disabled": true
+								},
+								{
+									"key": "language",
+									"value": "en",
+									"disabled": true
+								},
+								{
+									"key": "boundingBox",
+									"value": "49.1,8.5,49,8.7",
+									"disabled": true
+								},
+								{
+									"key": "center",
+									"value": "49.0054,8.3980",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Places By Position",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_geocoding}}/places/by-position/:latitude/:longitude?limit=10&radius=500",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_geocoding}}",
+								"places",
+								"by-position",
+								":latitude",
+								":longitude"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "radius",
+									"value": "500"
+								},
+								{
+									"key": "categoryIds",
+									"value": "navteq-lcms:300-3200-0030,navteq-lcms:700-7200-0345",
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "latitude",
+									"value": "41.82813035092223"
+								},
+								{
+									"key": "longitude",
+									"value": "-71.40684127807619"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Places By Area",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"area\": {\r\n        \"geometry\": \"{\\\"type\\\":\\\"Polygon\\\",\\\"coordinates\\\":[[[8.42453444199705,49.01230514224551],[8.429016990562783,49.01364528393243],[8.4315681584841,49.0112589621344],[8.428587740733741,49.00789508687052],[8.42453444199705,49.01230514224551]]]}\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_geocoding}}/places/by-area?categoryFilter=navteq-lcms:100-1000-0000&language=it",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_geocoding}}",
+								"places",
+								"by-area"
+							],
+							"query": [
+								{
+									"key": "categoryFilter",
+									"value": "navteq-lcms:100-1000-0000"
+								},
+								{
+									"key": "language",
+									"value": "it"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Places Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_geocoding}}/place-categories",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_geocoding}}",
+								"place-categories"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "apikey",
+				"apikey": [
+					{
+						"key": "key",
+						"value": "ApiKey",
+						"type": "string"
+					},
+					{
+						"key": "value",
+						"value": "{{ApiKey}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"var baseTemplate = `",
+					"<link rel=\"stylesheet\" href=\"https://unpkg.com/leaflet@1.6.0/dist/leaflet.css\"",
+					"integrity=\"sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==\"",
+					"crossorigin=\"\"/>",
+					"",
+					"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js\" integrity=\"sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=\" crossorigin=\"anonymous\"></script>",
+					"",
+					"<!-- Make sure you put this AFTER Leaflet's CSS -->",
+					"<script src=\"https://unpkg.com/leaflet@1.6.0/dist/leaflet.js\"",
+					"integrity=\"sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==\"",
+					"crossorigin=\"\"></script>",
+					"",
+					"<div id=\"mapid\"></div>",
+					"<style>",
+					"#mapid { height: 400px; }",
+					"</style>`;",
+					"",
+					"var visualizeTemplate = `",
+					"<div id=\"singlePosition\" style=\"display:none;\">",
+					"(Move the request point marker around to see its position here:) <br/>",
+					"lat: <input type=text id='latLabel'/><br/> ",
+					"lon: <input type=text id='lonLabel'/><br/> ",
+					"center: <input type=text id='centerLabel'/><br/> ",
+					"</div>",
+					"<div id=\"area\">",
+					"map bounds: <input type=text id='boundsLabel'/><br/> ",
+					"map bounds as JSON: <input type=text id='boundsJsonLabel'/><br/> ",
+					"</div>",
+					"<script>",
+					"$(function () {",
+					"    var mymap = L.map('mapid').setView([51.505, -0.09], 2);",
+					"    L.tileLayer('http://xserver-2:50000/services/rest/XMap/tile/{z}/{x}/{y}', {",
+					"        maxZoom: 22,",
+					"    }).addTo(mymap);",
+					"    mymap.on('moveend', function() { ",
+					"        var bounds = mymap.getBounds();",
+					"        if (bounds != null && bounds !== undefined && bounds.isValid()) {",
+					"            document.getElementById(\"boundsLabel\").value = ",
+					"                bounds.getNorth() + \",\" + ",
+					"                bounds.getWest() + \",\" + ",
+					"                bounds.getSouth() + \",\" + ",
+					"                bounds.getEast();",
+					"            document.getElementById(\"boundsJsonLabel\").value= ",
+					"              \"[[\" + ",
+					"              \"[\" + bounds.getWest() + \",\" + bounds.getNorth() + \"],\" + ",
+					"              \"[\" + bounds.getWest() + \",\" + bounds.getSouth() + \"],\" + ",
+					"              \"[\" + bounds.getEast() + \",\" + bounds.getSouth() + \"],\" + ",
+					"              \"[\" + bounds.getEast() + \",\" + bounds.getNorth() + \"],\" + ",
+					"              \"[\" + bounds.getWest() + \",\" + bounds.getNorth() + \"]\" +",
+					"              \"]]\";",
+					"        }",
+					"    });",
+					"    ",
+					"    var coordinates = [];",
+					"    var byRequestPositions = '{{requestPositions}}' !== \"\";",
+					"    if (byRequestPositions) {",
+					"        {{#each requestPositions}}",
+					"            var point = new L.LatLng({{latitude}}, {{longitude}});",
+					"            coordinates.push(point);",
+					"            var requestMarker = L.marker(point, {draggable:true, autoPan:true})",
+					"            .addTo(mymap);",
+					"        requestMarker.on('drag', function(event){",
+					"            var marker = event.target;",
+					"            var position = requestMarker.getLatLng();",
+					"            document.getElementById(\"latLabel\").value = position.lat;",
+					"            document.getElementById(\"lonLabel\").value = position.lng;",
+					"                document.getElementById(\"centerLabel\").value = position.lat + \",\" + position.lng;",
+					"        });",
+					"        {{/each}}   ",
+					"        document.getElementById(\"singlePosition\").style.display = \"block\";",
+					"    }",
+					"    var byRequestGeometry = '{{requestGeometry}}' !== \"\";",
+					"    if (byRequestGeometry) {",
+					"        var geoJSONString = '{{requestGeometry}}'.replaceAll(\"&quot;\", \"\\\\\\\"\");",
+					"        var geoJSONLayer = new L.GeoJSON(JSON.parse(geoJSONString));",
+					"        geoJSONLayer.addTo(mymap);",
+					"        coordinates.push(geoJSONLayer.getBounds().getNorthWest());",
+					"        coordinates.push(geoJSONLayer.getBounds().getSouthEast());",
+					"    }",
+					"",
+					"    {{#each responseItems}}",
+					"        var reference = new L.LatLng({{referencePosition.latitude}}, {{referencePosition.longitude}});",
+					"        coordinates.push(reference);",
+					"",
+					"        var popUp = '<b>{{formattedAddress}}</b>';",
+					"        if ('{{quality.distance}}' !== \"\") {",
+					"            popUp += '<br>Distance[m]: {{quality.distance}}';",
+					"        }",
+					"        if ('{{quality.totalScore}}' !== \"\") {",
+					"            popUp += '<br>Total score[%]: {{quality.totalScore}}';",
+					"        }",
+					"        if ('{{categoryIds}}' !== \"\") {",
+					"            popUp += '<br>Categories: {{categoryIds}}';",
+					"        }",
+					"        L.circleMarker(reference)",
+					"            .bindPopup(popUp)",
+					"            .addTo(mymap);",
+					"                ",
+					"        if ('{{roadAccessPosition}}' !== \"\") {",
+					"            var access = new L.LatLng('{{roadAccessPosition.latitude}}', '{{roadAccessPosition.longitude}}');",
+					"        coordinates.push(access);",
+					"        new L.Polyline([reference, access], {",
+					"            color: 'green',",
+					"            weight: 3,",
+					"            opacity: 0.5,",
+					"            smoothFactor: 1",
+					"        }).addTo(mymap);",
+					"            if (byRequestPositions) {",
+					"            new L.Polyline([access, coordinates[0]], {",
+					"                color: 'blue',",
+					"                weight: 2,",
+					"                opacity: 1,",
+					"                smoothFactor: 0",
+					"            }).addTo(mymap);",
+					"        }",
+					"        }       ",
+					"    {{/each}}",
+					"    mymap.fitBounds(coordinates);",
+					"});",
+					"</script>`;",
+					"",
+					"var urlPaths = pm.request.url.path;",
+					"var urlQuery = pm.request.url.query;",
+					"var maxPathIndex = urlPaths.length;",
+					"",
+					"var requestPositions = [];",
+					"var requestGeometry;",
+					"var requestVariant = urlPaths[maxPathIndex - 1];",
+					"if (requestVariant === \"place-categories\") {",
+					"   return;",
+					"} else if (requestVariant === \"by-area\") {",
+					"    requestGeometry = JSON.parse(pm.request.body).area.geometry;",
+					"} else if ((requestVariant === \"by-text\") || (requestVariant === \"by-address\")) {",
+					"    if (urlQuery.get(\"boundingBox\") !== undefined) {",
+					"        boxAsString = decodeURIComponent(urlQuery.get(\"boundingBox\"));",
+					"        var rect = JSON.parse(\"[\" + boxAsString + \"]\");",
+					"        var rg = { \"type\": \"Polygon\", \"coordinates\": [[]] };",
+					"        if(rect[1] > rect[3]) {",
+					"            rect[3] = rect[3] + 360;",
+					"        }",
+					"        rg.coordinates[0].push([rect[1], rect[0]]);",
+					"        rg.coordinates[0].push([rect[1], rect[2]]);",
+					"        rg.coordinates[0].push([rect[3], rect[2]]);",
+					"        rg.coordinates[0].push([rect[3], rect[0]]);",
+					"        rg.coordinates[0].push([rect[1], rect[0]]);",
+					"        requestGeometry = JSON.stringify(rg);",
+					"    }",
+					"    centerAsString = urlQuery.get(\"center\");",
+					"    if (centerAsString !== undefined) {",
+					"        var point = JSON.parse(\"[\" + centerAsString + \"]\");",
+					"        requestPositions = [{ latitude: point[0], longitude: point[1] }]",
+					"    }",
+					"} else {",
+					"    if (urlPaths[maxPathIndex - 3] === \"by-position\") {",
+					"        var latIndex = maxPathIndex - 2;",
+					"        var lonIndex = maxPathIndex - 1;",
+					"        requestPositions = [{ latitude: urlPaths[latIndex], longitude: urlPaths[lonIndex] }]",
+					"    } else {",
+					"        console.log(\"Unknown variant : \" + urlPaths);",
+					"    }",
+					"}",
+					"",
+					"var responseJSon = JSON.parse(responseBody);",
+					"var data = { responseItems: (responseJSon.places) ? responseJSon.places : responseJSon.locations };",
+					"if (requestPositions.length > 0) {",
+					"    data.requestPositions = requestPositions;",
+					"}",
+					"if (requestGeometry) {",
+					"    data.requestGeometry = requestGeometry;",
+					"}",
+					"pm.visualizer.set(baseTemplate.concat(visualizeTemplate), data);",
+					"console.log(data);",
+					"console.log(pm.request);",
+					""
+				]
+			}
+		}
+	]
+}

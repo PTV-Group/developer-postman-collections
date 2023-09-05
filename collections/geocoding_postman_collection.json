@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "623dc98d-c529-4a2e-b90e-1af96e29e59d",
+		"_postman_id": "6c28ad5a-91db-4ced-b241-37e29233dd36",
 		"name": "PTV Developer Geocoding API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "12119074"
+		"_exporter_id": "11539793"
 	},
 	"item": [
 		{
@@ -436,6 +436,71 @@
 							""
 						]
 					}
+				}
+			]
+		},
+		{
+			"name": "Sugggestions",
+			"item": [
+				{
+					"name": "Suggestions-by-Text",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_geocoding}}/suggestions/by-text?searchText=Springf",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_geocoding}}",
+								"suggestions",
+								"by-text"
+							],
+							"query": [
+								{
+									"key": "searchText",
+									"value": "Springf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Suggestions-by-Address",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{protocol}}://{{hostname}}/{{apiprefix_geocoding}}/suggestions/by-address?country=Netherlands&locality=Amste&inputField=LOCALITY",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"{{apiprefix_geocoding}}",
+								"suggestions",
+								"by-address"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "Netherlands"
+								},
+								{
+									"key": "locality",
+									"value": "Amste"
+								},
+								{
+									"key": "inputField",
+									"value": "LOCALITY"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}
